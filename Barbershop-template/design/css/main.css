@@ -133,11 +133,16 @@ ul.nav>li>a
 	height: 45px; 
 	line-height: 45px; 
 	display: block; 
-	margin: 0; 
+	margin: 0;
 }
 .header-btn .menu-btn:hover 
 {
     opacity: .8;
+}
+div.header-btn{
+    margin-left: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 
@@ -241,7 +246,7 @@ ul.nav>li>a
 
 .book_bg 
 {
-    background-image: url(../images/book-bg.jpg);
+    /* background-image: url(../images/book-bg.jpg); */
     background-repeat: no-repeat;
     background-position: center left;
     position: absolute;
@@ -249,6 +254,16 @@ ul.nav>li>a
     height: 100%;
     left: 0;
     top: 0;
+    text-align: center;
+    color: white;
+}
+
+.book_bg_text{
+    height: 1110px;
+    padding-top: 115px;
+}
+h3{
+    color: #9e8a78;
 }
 .map_pattern 
 {
