@@ -888,7 +888,8 @@ ul#mobile-menu.menu li a
 
 
 .login input[type="text"],
-.login input[type="password"]
+.login input[type="password"],
+.login input[type="tel"]
 {
     border: 1px solid #e6e6e6;
     box-shadow: none;
