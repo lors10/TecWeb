@@ -315,4 +315,36 @@ function fixStepIndicator(n)
     x[n].className += " active";
 }
 
+/*
+	============================
+
+	VALIDATE LOGIN FORM
+
+	============================
+*/
+
+function validateLogInForm()
+{
+    var username_input = document.forms["login-form"]["username"].value;
+    var password_input = document.forms["login-form"]["password"].value;
+
+    if (username_input == "" && password_input == "")
+    {
+        document.getElementById('required_username').style.display = 'initial';
+        document.getElementById('required_password').style.display = 'initial';
+        return false;
+    }
+
+    if (username_input == "")
+    {
+        document.getElementById('required_username').style.display = 'initial';
+        return false;
+    }
+    if(password_input == "")
+    {
+        document.getElementById('required_password').style.display = 'initial';
+        return false;
+    }
+}
+
 
