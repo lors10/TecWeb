@@ -347,4 +347,77 @@ function validateLogInForm()
     }
 }
 
+/*
+	============================
+
+	VALIDATE SIGNUP FORM
+
+	============================
+*/
+
+function validateSignUpForm()
+{
+    var name_input = document.forms["signup-form"]["name"].value;
+    var surname_input = document.forms["signup-form"]["surname"].value;
+    var number_input = document.forms["signup-form"]["number"].value;
+    var username_input = document.forms["signup-form"]["username"].value;
+    var password_input = document.forms["signup-form"]["password"].value;
+    var confirm_password_input = document.forms["signup-form"]["confirm_password"].value;
+
+    if (name_input == "" && surname_input == "" &&
+        number_input == "" && username_input == "" &&
+        password_input == "" && confirm_password_input == "")
+    {
+        document.getElementById('required_name').style.display = 'initial';
+        document.getElementById('required_surname').style.display = 'initial';
+        document.getElementById('required_number').style.display = 'initial';
+        document.getElementById('required_username').style.display = 'initial';
+        document.getElementById('required_password').style.display = 'initial';
+        document.getElementById('required_confirm_password').style.display = 'initial';
+        return false;
+    }
+
+    if (name_input == "")
+    {
+        document.getElementById('required_name').style.display = 'initial';
+        return false;
+    }
+
+    if (surname_input == "")
+    {
+        document.getElementById('required_surname').style.display = 'initial';
+        return false;
+    }
+
+    if (number_input == "")
+    {
+        document.getElementById('required_number').style.display = 'initial';
+        return false;
+    }
+
+    if (username_input == "")
+    {
+        document.getElementById('required_username').style.display = 'initial';
+        return false;
+    }
+    if(password_input == "")
+    {
+        document.getElementById('required_password').style.display = 'initial';
+        return false;
+    }
+
+    if (confirm_password_input == "")
+    {
+        document.getElementById('required_confirm_password').style.display = 'initial';
+        return false;
+    }
+
+    if (password_input.value != confirm_password_input.value) {
+        document.getElementById('required_password').style.display = 'initial';
+        document.getElementById('required_confirm_password').style.display = 'initial';
+    }
+}
+
+
+
 

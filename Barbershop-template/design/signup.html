@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barber Login</title>
+    <title>Barber Sign Up</title>
 
     <!-- Nunito FONT FAMILY FILE -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -14,9 +14,9 @@
 </head>
 <body>
 <div class="login">
-    <form class="login-container validate-form" name="login-form" method="POST" action="#" onsubmit="return validateLogInForm()">
+    <form class="login-container validate-form" name="signup-form" method="POST" action="#" onsubmit="return validateSignUpForm()">
 				<span class="login100-form-title p-b-32">
-					Barber Login
+					Barber Sign Up
 				</span>
 
         <div class="alert alert-danger">
@@ -24,14 +24,34 @@
                 <span aria-hidden="true">×</span>
             </button>
             <div class="messages">
-                <div>Username and/or password are incorrect!</div>
+                <div>Something went wrong, fill in all the fields!</div>
             </div>
+        </div>
+
+        <!-- NAME INPUT -->
+
+        <div class="form-input">
+            <input type="text" name="name" class="form-control" placeholder="Name" oninput = "getElementById('required_name').style.display = 'none'" autocomplete="off">
+            <span class="invalid-feedback" id="required_name">Name is required!</span>
+        </div>
+
+        <!-- SURNAME INPUT -->
+
+        <div class="form-input">
+            <input type="text" name="surname" class="form-control" placeholder="Surname" oninput = "getElementById('required_surname').style.display = 'none'" autocomplete="off">
+            <span class="invalid-feedback" id="required_surname">Surname is required!</span>
+        </div>
+
+        <!-- PHONE INPUT -->
+
+        <div class="form-input">
+            <input type="tel" name="number" class="form-control" placeholder="Phone number" oninput = "getElementById('required_number').style.display = 'none'" autocomplete="off">
+            <span class="invalid-feedback" id="required_number">Phone number is required!</span>
         </div>
 
         <!-- USERNAME INPUT -->
 
         <div class="form-input">
-            <!-- <span class="txt1">Username</span> -->
             <input type="text" name="username" class="form-control" placeholder="Username" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
             <span class="invalid-feedback" id="required_username">Username is required!</span>
         </div>
@@ -43,29 +63,24 @@
             <span class="invalid-feedback" id="required_password">Password is required!</span>
         </div>
 
+        <!-- PASSWORD INPUT -->
+
+        <div class="form-input">
+            <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password" oninput = "getElementById('required_confirm_password').style.display = 'none'" autocomplete="new-password">
+            <span class="invalid-feedback" id="required_confirm_password">Password is required!</span>
+        </div>
+
         <!-- SIGN IN BUTTON -->
 
         <p>
-            <button type="submit" name="signin-button" >Sign In</button>
+            <button type="submit" name="signin-button">Sign In</button>
         </p>
 
         <!-- GO BACK BUTTON to Barber website -->
 
         <p>
-            <button type="goback" name="goback-button" class="goback-button"><a class="back" href="index.php">Go Back</a></button>
+            <button type="goback" name="goback-button" class="goback-button"><a class="back" href="login.php">Go Back</a></button>
         </p>
-
-        <!-- SIGN UP LINK -->
-
-        <span class="forgotPW">Don't have an account ? <a href="signup.php">Register here.</a></span>
-
-        <!-- AMMINISTRATOR LINK -->
-
-        <span class="forgotPW">Are you an administrator ? <a href="#">Click here</a></span>
-
-        <!-- FORGOT YOUR PASSWORD LINK -->
-
-        <span class="forgotPW">Forgot your password ? <a href="#">Reset it here.</a></span>
 
     </form>
 </div>

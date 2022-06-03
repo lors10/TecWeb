@@ -906,16 +906,17 @@ ul#mobile-menu.menu li a
 }
 
 .login input[type="text"]:focus,
-.login input[type="password"]:focus
+.login input[type="password"]:focus,
+.login input[type="tel"]:focus
 {
-    border-color: rgba(82, 168, 236, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    border-color: #9e8a78;
+    box-shadow: 0 1px 1px #9e8a78 inset, 0 0 8px #9e8a78;
     outline: 0 none;
 }
 
 .login button[type="submit"]
 {
-    background: #28d;
+    background: #9e8a78;
     border-color: transparent;
     color: #fff;
     cursor: pointer;
@@ -935,12 +936,39 @@ input:focus .border
 
 .login button[type="submit"]:hover
 {
-    background: #17c;
+    background: #9e8a78;
 }
 
 .login button[type="submit"]:focus
 {
-    border-color: #05a;
+    border-color: #9e8a78;
+}
+
+.login button[type="goback"]
+{
+    background: #222227;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    line-height: 40px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+}
+
+.login button[type="goback"]:hover
+{
+    background: #222227;
+}
+
+.login button[type="goback"]:focus
+{
+    border-color: #222227;
+}
+
+a.back{
+color: white
 }
 
 .login .forgotPW
