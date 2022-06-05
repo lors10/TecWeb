@@ -1,0 +1,389 @@
+{
+  "shapes" : [
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{250, 410}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"B520F12E-E413-4605-A8EC-BF71983275A2\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- path VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{250, 440}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"B31CD6E4-8A51-4441-83AE-AE569A9E60B3\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- alt VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 130}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"932BABE7-61DE-4F5A-B963-3FD9A403B361\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idImmagine INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 160}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"354DFF31-FF68-4EB6-83B7-D66A0C60C154\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idPositione INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 190}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"64922243-4D68-4AF5-8523-C108D9D69C4B\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- titolo VARCHAR(100)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 220}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"E7AFFB86-0120-4DA5-B180-DB352C98B563\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- testo VARCHAR(200)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 130}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"869E0619-64BE-47B7-B041-5597F7B53786\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idImmagine INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 630}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"B8666FEF-F4A1-4162-82BA-B5D85DC39708\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idImmagine INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 660}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"D0574FE2-1DE8-48E1-ACFE-D2DAB2D6751C\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idBarbiere INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 690}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"5BBE1298-39D5-4168-9B16-4ACC7CADD819\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- nomeBarbiere VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 720}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"DAC03A9F-2E66-45ED-8968-5B6CA037857C\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- cognomeBarbiere VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 750}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"825FAB83-32A0-4F7F-AFB9-C324EB143500\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- cellulareBarbiere VARCHAR(20)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 780}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"0F619FB3-1396-49D2-AA9A-068DBECA3D71\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- emailBarbiere VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 580}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"B4E42C9D-54F3-452F-832C-7E0B4C61D0D5\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idServizio INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 610}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"407B6DFE-5A8C-4479-8130-B8C445ECC43A\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idCategoria INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 645}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"532F3141-B133-4E06-A677-0EF09E9D2C60\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- nomeServizio VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 675}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"7274A5CF-F47A-4751-9BED-73B75F87B06E\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- descrizioneServizio VARCHAR(200)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 705}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"BED11820-5DBF-4436-8CB8-441482ABE951\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- prezzoServizio DECIMAL (6,2)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 480}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"C7069DD8-F0E0-4416-9D8A-CEA1504EB706\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idAppuntamento INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 510}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"62B37DC2-36BA-45A6-A4A9-C15BB2BE2117\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idUtente INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 660}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"EBC0C813-F75F-4675-86B2-5101D1F73020\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- createdAt DATETIME\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 690}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"426D9793-D573-4B71-AF56-CB4EB5365374\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- updateAt TIMESTAMP\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 600}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"33DAFEC8-8337-4905-8931-57851C70F359\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- cancellazione TINYINT(1)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 630}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"91265375-C891-4877-97BA-9627DE86E02D\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- ragioneCancellazione TEXT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 540}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"FDBF8948-453E-4D4C-91F1-7DCCFB324829\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- inizioAppuntamento TIMESTAMP\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{870, 570}\",\n  \"angle\" : 0,\n  \"size\" : \"{280, 30}\",\n  \"identifier\" : \"18B32865-C48D-42A4-94A5-EF17881650EA\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- fineAppuntamentoPrevisto TIMESTAMP\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 980}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"263A3B0D-3890-4CC3-A2B2-7D9C8CF5027C\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idCategoria INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 1010}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"8B89C80E-DF1B-4FCD-AEBA-241B6A352E13\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- nomeCategoria VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{450, 1040}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"A5243A92-013E-4A14-A0FA-ACE5AC88853A\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- descrizioneCategoria VARCHAR(200)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 130}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"5BFA0692-7401-4D11-850A-248D8510AA7D\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idUtente INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 160}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"4FC995B4-5982-46BD-89A2-1FAEEDD4A3F7\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- nomeUtente VARCHAR (50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 225}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"A4FDCC1F-054A-46F8-8D63-CC9059828A72\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- cellulareUtente VARCHAR(20)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 190}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"4E460383-9A53-4794-8634-0598FE0B2081\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- cognomeUtente VARCHAR (50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 250}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"7F78DEBC-E72B-4CD3-9E81-2E0D1D0ECA49\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- username VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 280}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"3B8E4906-30F6-46F2-827A-2A8559CA73D0\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- password VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{900, 310}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"08B83C52-8376-400A-AF11-30B8F97600A4\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- emailUtente VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 130}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"D0568A51-8E64-4D6A-A3CC-ED80F4D84437\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idUtente INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 160}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"1046A032-D3EC-49CE-8DEA-EAFCFD4736BC\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idGruppo INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 380}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"242D7B4B-9472-4DD7-B43A-CD48F6220C9A\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idGruppo INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 410}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"9B0ECF7D-13B6-408B-BB4B-17E78CEB75B8\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- nomeGruppo VARCHAR(30)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 440}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"F973FB26-4C5F-4E7E-B809-0274DD01EA3D\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- descrizioneGruppo VARCHAR(100)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 630}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"AE5DCC75-AD83-4713-931D-3F848BE6AF43\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idGruppo INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 660}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"11240EDA-7A21-4017-A00A-13B6F9D7CF06\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idServizio INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 870}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"ECA0B37B-03CD-410F-8461-402DB6FC1AF9\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idServizio INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 900}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"C2D522A9-F744-4836-B06D-47F9D5FDD444\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- script VARCHAR(50)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{1250, 930}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 30}\",\n  \"identifier\" : \"1AA729B6-E548-47DF-A61C-701D1BD92DA6\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- descrizioneServizio VARCHAR(100)\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{850, 880}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"D6DEDC8A-5AE6-4D76-B1B1-F9135C90C5FA\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idAppuntamento INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{850, 910}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"6FC58C7F-3D88-44FF-B3A7-CA6108C15D90\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idServizio INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{250, 350}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"47570C4A-877A-40F8-BEA2-AF67483C5F98\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"immagini\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"B520F12E-E413-4605-A8EC-BF71983275A2\",\n  \"B31CD6E4-8A51-4441-83AE-AE569A9E60B3\"\n]"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{50, 100}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"1A22494C-73A4-489B-A922-66C6036B4BE6\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"slider (carosello)\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"932BABE7-61DE-4F5A-B963-3FD9A403B361\",\n  \"354DFF31-FF68-4EB6-83B7-D66A0C60C154\",\n  \"64922243-4D68-4AF5-8523-C108D9D69C4B\",\n  \"E7AFFB86-0120-4DA5-B180-DB352C98B563\"\n]"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{450, 100}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"10C3A319-0B15-4DCC-A53F-9FCBE925A836\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"galleria foto\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"869E0619-64BE-47B7-B041-5597F7B53786\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{50, 600}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 250}\",\n  \"identifier\" : \"99B25EDF-3EEC-4125-933A-2C21FF9074F9\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"barbieri (dipendenti)\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node",
+      "children" : "[\n  \"B8666FEF-F4A1-4162-82BA-B5D85DC39708\",\n  \"D0574FE2-1DE8-48E1-ACFE-D2DAB2D6751C\",\n  \"5BBE1298-39D5-4168-9B16-4ACC7CADD819\",\n  \"DAC03A9F-2E66-45ED-8968-5B6CA037857C\",\n  \"825FAB83-32A0-4F7F-AFB9-C324EB143500\",\n  \"0F619FB3-1396-49D2-AA9A-068DBECA3D71\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{450, 550}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 250}\",\n  \"identifier\" : \"6963FA0C-81F7-4432-A76E-CC7599C3E79E\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"servizi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node",
+      "children" : "[\n  \"B4E42C9D-54F3-452F-832C-7E0B4C61D0D5\",\n  \"407B6DFE-5A8C-4479-8130-B8C445ECC43A\",\n  \"532F3141-B133-4E06-A677-0EF09E9D2C60\",\n  \"7274A5CF-F47A-4751-9BED-73B75F87B06E\",\n  \"BED11820-5DBF-4436-8CB8-441482ABE951\"\n]"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{150, 250}\",\n  \"identifier\" : \"1C538DF8-7058-454C-8EA4-0EFFCF62C204\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  },\n  \"sourcePoint\" : \"{250, 425}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{-0.5, 0}\"\n  }\n}"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{550, 250}\",\n  \"identifier\" : \"2E4F8B08-672F-4301-A3D3-C023C55A539B\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  },\n  \"sourcePoint\" : \"{450, 425}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0.5, 0}\"\n  }\n}"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{175, 600}\",\n  \"identifier\" : \"E62491C6-4EEA-4371-90A1-934E81C09689\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{250, 425}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{-0.5, 0}\"\n  }\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{870, 450}\",\n  \"angle\" : 0,\n  \"size\" : \"{280, 300}\",\n  \"identifier\" : \"71690A83-57A0-4018-B8AE-B60AC134373E\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"appuntamento\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"C7069DD8-F0E0-4416-9D8A-CEA1504EB706\",\n  \"62B37DC2-36BA-45A6-A4A9-C15BB2BE2117\",\n  \"EBC0C813-F75F-4675-86B2-5101D1F73020\",\n  \"426D9793-D573-4B71-AF56-CB4EB5365374\",\n  \"33DAFEC8-8337-4905-8931-57851C70F359\",\n  \"91265375-C891-4877-97BA-9627DE86E02D\",\n  \"FDBF8948-453E-4D4C-91F1-7DCCFB324829\",\n  \"18B32865-C48D-42A4-94A5-EF17881650EA\"\n]"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{450, 950}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 150}\",\n  \"identifier\" : \"EA4F6739-55E0-46A1-ABF5-0B29D7E448BE\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"categoria servizi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,13.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"263A3B0D-3890-4CC3-A2B2-7D9C8CF5027C\",\n  \"8B89C80E-DF1B-4FCD-AEBA-241B6A352E13\",\n  \"A5243A92-013E-4A14-A0FA-ACE5AC88853A\"\n]"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{575, 950}\",\n  \"identifier\" : \"71EFBAC2-1394-4060-AB27-EC82D03F5AB9\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{575, 800}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  }\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{900, 100}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 250}\",\n  \"identifier\" : \"2288F228-11A0-499B-90EA-90AC84E366AF\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"utenti\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"5BFA0692-7401-4D11-850A-248D8510AA7D\",\n  \"4FC995B4-5982-46BD-89A2-1FAEEDD4A3F7\",\n  \"A4FDCC1F-054A-46F8-8D63-CC9059828A72\",\n  \"4E460383-9A53-4794-8634-0598FE0B2081\",\n  \"7F78DEBC-E72B-4CD3-9E81-2E0D1D0ECA49\",\n  \"3B8E4906-30F6-46F2-827A-2A8559CA73D0\",\n  \"08B83C52-8376-400A-AF11-30B8F97600A4\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1010, 450}\",\n  \"identifier\" : \"D9C2E207-F3B2-40A6-BFE4-80DD9FB83EC1\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"connectorMode\" : 2,\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{1025, 350}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  }\n}",
+      "class" : "connector"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{1250, 100}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"EACF8D72-E321-4873-8981-EF1369371FE6\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"utentigruppi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"D0568A51-8E64-4D6A-A3CC-ED80F4D84437\",\n  \"1046A032-D3EC-49CE-8DEA-EAFCFD4736BC\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1250, 175}\",\n  \"identifier\" : \"D4B46CA0-5F55-4AF1-9C4E-F3BAB967468C\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{-0.5, 0}\"\n  },\n  \"sourcePoint\" : \"{1150, 225}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0.5, 0}\"\n  }\n}",
+      "class" : "connector"
+    },
+    {
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{1250, 350}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 150}\",\n  \"identifier\" : \"2C5437B7-6AFD-44B2-B30E-51A383E930A3\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"gruppi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node",
+      "children" : "[\n  \"242D7B4B-9472-4DD7-B43A-CD48F6220C9A\",\n  \"9B0ECF7D-13B6-408B-BB4B-17E78CEB75B8\",\n  \"F973FB26-4C5F-4E7E-B809-0274DD01EA3D\"\n]"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1375, 350}\",\n  \"identifier\" : \"7C0CFB1E-0C45-4F6C-8209-553683F4CE79\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{1350, 250}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  }\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{1250, 600}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"086BC18A-09CB-4804-9EE6-DBBD51154531\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"gruppiservizi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"AE5DCC75-AD83-4713-931D-3F848BE6AF43\",\n  \"11240EDA-7A21-4017-A00A-13B6F9D7CF06\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1350, 600}\",\n  \"identifier\" : \"1593137A-7FA7-4774-B8BE-52CFD311FBDF\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{1375, 500}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  }\n}",
+      "class" : "connector"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{1250, 840}\",\n  \"angle\" : 0,\n  \"size\" : \"{250, 150}\",\n  \"identifier\" : \"CC0DCA54-5DC8-4EE3-9048-FBE876852B77\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"servizi\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "children" : "[\n  \"ECA0B37B-03CD-410F-8461-402DB6FC1AF9\",\n  \"C2D522A9-F744-4836-B06D-47F9D5FDD444\",\n  \"1AA729B6-E548-47DF-A61C-701D1BD92DA6\"\n]"
+    },
+    {
+      "class" : "connector",
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1375, 840}\",\n  \"identifier\" : \"96B1BE8F-0A15-478D-87FF-D7B08371A3A3\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  },\n  \"sourcePoint\" : \"{1350, 750}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  }\n}"
+    },
+    {
+      "attrs" : "{\n  \"layout\" : \"container\",\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"container1\",\n  \"position\" : \"{850, 850}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 150}\",\n  \"identifier\" : \"59C0F978-E1DB-4D96-A2A0-885C20D40104\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_45\",\n  \"value\" : \"prenotazione\",\n  \"privateStyle\" : {\n    \"font\" : \"Helvetica,14.0\",\n    \"textAlignment\" : 2,\n    \"textColor\" : \"#FFFFFFFF\"\n  },\n  \"isRelative\" : false\n}",
+      "class" : "dia-node",
+      "children" : "[\n  \"D6DEDC8A-5AE6-4D76-B1B1-F9135C90C5FA\",\n  \"6FC58C7F-3D88-44FF-B3A7-CA6108C15D90\"\n]"
+    },
+    {
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{700, 675}\",\n  \"identifier\" : \"1714068C-6A26-4812-A353-1CA151BC02D0\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0.5, 0}\"\n  },\n  \"sourcePoint\" : \"{850, 925}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{-0.5, 0}\"\n  }\n}",
+      "class" : "connector"
+    },
+    {
+      "attrs" : "{\n  \"isRelative\" : false,\n  \"points\" : [\n\n  ],\n  \"shape\" : \"connector\",\n  \"targetPoint\" : \"{1010, 750}\",\n  \"identifier\" : \"71D94B36-F5F9-4285-AF35-02B7C6654AA9\",\n  \"tag\" : 0,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"themeStyle\" : \"edge_11\",\n  \"isTemplate\" : false,\n  \"privateStyle\" : {\n    \"crossStyle\" : \"round\"\n  },\n  \"exitPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, 0.5}\"\n  },\n  \"sourcePoint\" : \"{950, 850}\",\n  \"entryPoint\" : {\n    \"offset\" : \"{0, 0}\",\n    \"direction\" : 0,\n    \"location\" : \"{0, -0.5}\"\n  }\n}",
+      "class" : "connector"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{250, 380}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"03FFFE30-ADBD-41E1-9EC6-2CE1A8B10987\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"- idImmagine INT\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#FFFFFFFF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{250, 500}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"6245BB09-C0F7-450F-A911-95F0788F1437\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"alt* = descrizione\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#000000FF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    },
+    {
+      "class" : "dia-node",
+      "attrs" : "{\n  \"lockAspectRatio\" : false,\n  \"shape\" : \"text\",\n  \"position\" : \"{50, 70}\",\n  \"angle\" : 0,\n  \"size\" : \"{200, 30}\",\n  \"identifier\" : \"C4EE925D-DE64-4B6E-94B6-86747F78DF57\",\n  \"tag\" : 0,\n  \"connectable\" : true,\n  \"isLocked\" : false,\n  \"visible\" : true,\n  \"isTemplate\" : false,\n  \"themeStyle\" : \"style_11\",\n  \"value\" : \"id_position = numero slide carosello\",\n  \"privateStyle\" : {\n    \"textColor\" : \"#000000FF\",\n    \"textAlignment\" : 0,\n    \"textVerticalAlignment\" : 1,\n    \"font\" : \".AppleSystemUIFont,12.0\"\n  },\n  \"isRelative\" : false\n}"
+    }
+  ],
+  "frame" : [
+    [
+      0,
+      0
+    ],
+    [
+      1614,
+      1169
+    ]
+  ],
+  "terminals" : {
+    "D9C2E207-F3B2-40A6-BFE4-80DD9FB83EC1" : [
+      "2288F228-11A0-499B-90EA-90AC84E366AF",
+      "71690A83-57A0-4018-B8AE-B60AC134373E"
+    ],
+    "1714068C-6A26-4812-A353-1CA151BC02D0" : [
+      "59C0F978-E1DB-4D96-A2A0-885C20D40104",
+      "6963FA0C-81F7-4432-A76E-CC7599C3E79E"
+    ],
+    "1C538DF8-7058-454C-8EA4-0EFFCF62C204" : [
+      "47570C4A-877A-40F8-BEA2-AF67483C5F98",
+      "1A22494C-73A4-489B-A922-66C6036B4BE6"
+    ],
+    "7C0CFB1E-0C45-4F6C-8209-553683F4CE79" : [
+      "EACF8D72-E321-4873-8981-EF1369371FE6",
+      "2C5437B7-6AFD-44B2-B30E-51A383E930A3"
+    ],
+    "D4B46CA0-5F55-4AF1-9C4E-F3BAB967468C" : [
+      "2288F228-11A0-499B-90EA-90AC84E366AF",
+      "EACF8D72-E321-4873-8981-EF1369371FE6"
+    ],
+    "2E4F8B08-672F-4301-A3D3-C023C55A539B" : [
+      "47570C4A-877A-40F8-BEA2-AF67483C5F98",
+      "10C3A319-0B15-4DCC-A53F-9FCBE925A836"
+    ],
+    "E62491C6-4EEA-4371-90A1-934E81C09689" : [
+      "47570C4A-877A-40F8-BEA2-AF67483C5F98",
+      "99B25EDF-3EEC-4125-933A-2C21FF9074F9"
+    ],
+    "96B1BE8F-0A15-478D-87FF-D7B08371A3A3" : [
+      "086BC18A-09CB-4804-9EE6-DBBD51154531",
+      "CC0DCA54-5DC8-4EE3-9048-FBE876852B77"
+    ],
+    "71D94B36-F5F9-4285-AF35-02B7C6654AA9" : [
+      "59C0F978-E1DB-4D96-A2A0-885C20D40104",
+      "71690A83-57A0-4018-B8AE-B60AC134373E"
+    ],
+    "1593137A-7FA7-4774-B8BE-52CFD311FBDF" : [
+      "2C5437B7-6AFD-44B2-B30E-51A383E930A3",
+      "086BC18A-09CB-4804-9EE6-DBBD51154531"
+    ],
+    "71EFBAC2-1394-4060-AB27-EC82D03F5AB9" : [
+      "6963FA0C-81F7-4432-A76E-CC7599C3E79E",
+      "EA4F6739-55E0-46A1-ABF5-0B29D7E448BE"
+    ]
+  },
+  "design" : {
+    "connectorPathStyle" : "rounded",
+    "themeName" : "office",
+    "paper" : {
+      "rightMargin" : 20,
+      "bottomMargin" : 20,
+      "topMargin" : 20,
+      "name" : "a4",
+      "leftMargin" : 20,
+      "ori" : true
+    },
+    "autoFrame" : true,
+    "showPageMarker" : true
+  },
+  "showsGrids" : true,
+  "version" : "100"
+}
