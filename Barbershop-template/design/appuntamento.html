@@ -1,6 +1,6 @@
     <!-- BOOKING SECTION -->
 
-    <section class="book_section" id="booking">
+    <section class="book_section" id="booking" xmlns="http://www.w3.org/1999/html">
     <div class="book_bg">
         <div class="book_bg_text">
             <h2>Time Open</h2>
@@ -27,14 +27,21 @@
                             <input type="text" class="form-control" placeholder="Your username">
                         </div>
                         <div class="col-md-6 padding-10">
-                            <!-- <input type="text" class="form-control" placeholder="Your surname"> -->
-                            <select name="services" class="form-control" id="services" autofocus>
+                            <!-- <select name="services" class="form-control" id="services" autofocus>
                                 <option>Clean Shaving</option>
                                 <option value="Beard Triming">Beard Triming</option>
                                 <option value="Smooth Shave">Smooth Shave</option>
                                 <option value="Face Cleaning">Face Cleaning</option>
                                 <option value="Hair Cut">Hair Cut</option>
-                            </select>
+                            </select> -->
+                            <input list="servizi" class="form-control">
+                                <datalist id="servizi">
+                                    <option>Clean Shaving</option>
+                                    <option value="Beard Triming">Beard Triming</option>
+                                    <option value="Smooth Shave">Smooth Shave</option>
+                                    <option value="Face Cleaning">Face Cleaning</option>
+                                    <option value="Hair Cut">Hair Cut</option>
+                                </datalist>
                         </div>
                         <div class="col-md-6 padding-10">
                             <input type="date" class="form-control">
