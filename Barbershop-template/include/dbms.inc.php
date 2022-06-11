@@ -10,10 +10,10 @@
     $connection =
         new mysqli($servername, $username, $password, $databasename);
 
-    // check della connessione
-    if ($connection->connect_error) {
-        // per visualizzare l'errore
-        die("Connection error" . $connection->connect_error);
-    }
+        // check della connessione
+        if ($connection->connect_error) {
+            // per visualizzare l'errore
+            die("Connection error" . $connection->connect_error);
+        }
 
 ?>
