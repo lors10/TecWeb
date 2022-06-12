@@ -4,7 +4,8 @@
     $servername = "localhost";
     $username = "root";
     $password = "root";
-    $databasename = "barber_shop";
+    //$databasename = "barber_shop";
+    $databasename = "barber_shop_prova";
 
     //connessione
     $connection =

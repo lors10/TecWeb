@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
+    
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Barbershop Booking Website">
+        <meta name="author" content="JAIRI IDRISS">
+    
+        <title>Dasbhoard Admin</title>
+    
+        <!-- FONTS FILE -->
+        <link href="design/fonts/css/all.min.css" rel="stylesheet" type="text/css">
+    
+        <!-- Nunito FONT FAMILY FILE -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
+        <!-- CSS FILES -->
+        <link href="design/css/sb-admin-2.min.css" rel="stylesheet">
+        <link href="design/css/main.css" rel="stylesheet">
+    
+        <!-- Barber Icons -->
+        <link rel="stylesheet" type="text/css" href="design/fonts/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="design/css/barber-icons.css">
+    
+    </head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Barbershop Booking Website">
-    <meta name="author" content="JAIRI IDRISS">
-
-    <title>PageTitle</title>
-
-    <!-- FONTS FILE -->
-    <link href="fonts/css/all.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Nunito FONT FAMILY FILE -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-    <!-- CSS FILES -->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-
-    <!-- Barber Icons -->
-    <link rel="stylesheet" type="text/css" href="fonts/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/barber-icons.css">
-
-</head>
-
-<body id="page-top">
-
-<!-- Page Wrapper -->
-<div id="wrapper">
+    <body id="page-top">
+    
+        <!-- Page Wrapper -->
+        <div id="wrapper">
 
     <!-- Sidebar -->
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -48,7 +48,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="#">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -139,7 +139,7 @@
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" target="_blank">
+                        <a class="nav-link" href="../" target="_blank">
                             <i class="far fa-eye"></i>
                             <span style="margin-left: 5px;">View website</span>
                         </a>
@@ -150,7 +150,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 									<span class="mr-2 d-none d-lg-inline text-gray-600 small">
-										$_SESSION['username_barbershop_Xw211qAAsq4']
+										<[loggedUser]>
 									</span>
                             <i class="fas fa-caret-down"></i>
                         </a>
@@ -181,217 +181,88 @@
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-	<div class="container-fluid">
-		
-		<!-- Page Heading -->
-		<div class="d-sm-flex align-items-center justify-content-between mb-4">
-			<h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-			<a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-				<i class="fas fa-download fa-sm text-white-50"></i>
-				Generate Report
-			</a>
-		</div>
+            <div class="container-fluid">
 
-		<!-- Content Row -->
-		<div class="row">
+                <!-- Content Row -->
+                <div class="row">
 
-			<div class="col-xl-3 col-md-6 mb-4">
-				<div class="card border-left-primary shadow h-100 py-2">
-					<div class="card-body">
-				  		<div class="row no-gutters align-items-center">
-							<div class="col mr-2">
-					  			<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-					  				Total Clients
-					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800">numero</div>
-							</div>
-							<div class="col-auto">
-					  			<i class="bs bs-boy fa-2x text-gray-300"></i>
-							</div>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Total Clients
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="bs bs-boy fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-			<div class="col-xl-3 col-md-6 mb-4">
-				<div class="card border-left-success shadow h-100 py-2">
-					<div class="card-body">
-				  		<div class="row no-gutters align-items-center">
-							<div class="col mr-2">
-					  			<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-					  				Total Services
-					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800">numero</div>
-							</div>
-							<div class="col-auto">
-					  			<i class="bs bs-scissors-1 fa-2x text-gray-300"></i>
-							</div>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                            Total Services
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="bs bs-scissors-1 fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-			<div class="col-xl-3 col-md-6 mb-4">
-				<div class="card border-left-info shadow h-100 py-2">
-					<div class="card-body">
-				  		<div class="row no-gutters align-items-center">
-							<div class="col mr-2">
-					  			<div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-					  				Employees
-					  			</div>
-					  			<div class="row no-gutters align-items-center">
-									<div class="col-auto">
-						  				<div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">numero</div>
-									</div>
-					  			</div>
-							</div>
-							<div class="col-auto">
-					  			<i class="bs bs-man fa-2x text-gray-300"></i>
-							</div>
-				  		</div>
-					</div>
-			  	</div>
-			</div>
-
-			<div class="col-xl-3 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
-					<div class="card-body">
-				  		<div class="row no-gutters align-items-center">
-							<div class="col mr-2">
-					  			<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-					  				Appointments
-					  			</div>
-					  			<div class="h5 mb-0 font-weight-bold text-gray-800">numero</div>
-							</div>
-							<div class="col-auto">
-					  			<i class="fas fa-calendar fa-2x text-gray-300"></i>
-							</div>
-				 		</div>
-					</div>
-			  	</div>
-			</div>
-		</div>
-
-		<!-- Appointment Tables -->
-        <div class="card shadow mb-4">
-            <div class="card-header tab" style="padding: 0px !important;background: #36b9cc!important">
-            	<button class="tablinks active" onclick="openTab(event, 'Upcoming')">
-            		Upcoming Bookings
-            	</button>
-                <button class="tablinks" onclick="openTab(event, 'All')">
-                	All Bookings
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'Canceled')">
-                	Canceled Bookings
-                </button>
-            </div>
-            <div class="card-body">
-            	<div class="table-responsive">
-                	<table class="table table-bordered tabcontent" id="Upcoming" style="display:table" width="100%" cellspacing="0">
-                  		<thead>
-                                <tr>
-                                    <th>
-                                        Start Time
-                                    </th>
-                                    <th>
-                                        Booked Services
-                                    </th>
-                                    <th>
-                                        End Time Expected
-                                    </th>
-                                    <th>
-                                        Client
-                                    </th>
-                                    <th>
-                                        Employee
-                                    </th>
-                                    <th>
-                                        Manage
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <ul class="list-inline m-0">
-                                    <!-- CANCEL BUTTON -->
-                                    <li class="list-inline-item" data-toggle="tooltip" title="Cancel Appointment">
-                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
-                                            <i class="fas fa-calendar-times"></i>
-                                        </button>
-
-                                        <!-- CANCEL MODAL -->
-                                        <div class="modal fade" id="#" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-                                            <div class="modal-dialog" role="document">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title">Cancel Appointment</h5>
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <p>Are you sure you want to cancel this appointment?</p>
-                                                            <div class="form-group">
-                                                                <label>Tell Us Why?</label>
-                                                                    <textarea class="form-control" id=""></textarea>
-                                                            </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                        <button type="button" data-id = "" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
-                                                    </div>
-                                                </div>
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                            Employees
+                                        </div>
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col-auto">
+                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">0</div>
                                             </div>
                                         </div>
-                                    </li>
-                                </ul>
-                            </tbody>
-                	</table>
-                	<table class="table table-bordered tabcontent" id="All" width="100%" cellspacing="0">
-                  		<thead>
-                            <tr>
-                                <th>
-                                    Start Time
-                                </th>
-                                <th>
-                                    Booked Services
-                                </th>
-                                <th>
-                                    End Time Expected
-                                </th>
-                                <th>
-                                    Client
-                                </th>
-                                <th>
-                                    Employee
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                	</table>
-                	<table class="table table-bordered tabcontent" id="Canceled" width="100%" cellspacing="0">
-                  		<thead>
-                            <tr>
-                                <th>
-                                    Start Time
-                                </th>
-                                <th>
-                                    Client
-                                </th>
-                                <th>
-                                    Cancellation Reason
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                	</table>
-              	</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="bs bs-man fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                            Appointments
+                                        </div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-	</div>
-
-
         </div>
         <!-- End of Main Content -->
 
@@ -399,47 +270,52 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Barbershop Website by JAIRI IDRISS 2020</span>
+                    <span>Copyright &copy; Barbershop Website</span>
                 </div>
             </div>
         </footer>
         <!-- End of Footer -->
-
     </div>
-    <!-- End of Content Wrapper -->
+            <!-- End of Content Wrapper -->
+        </div>
+        <!-- End of Page Wrapper -->
 
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Select "Logout" below if you are ready to end your current session.
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="#">Logout</a>
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Select "Logout" below if you are ready to end your current session.
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="logout.php">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 
-<!-- INCLUDE JS SCRIPTS -->
-<script src="js/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/sb-admin-2.min.js"></script>
-<script src="js/main.js"></script>
+        <!-- INCLUDE JS SCRIPTS -->
+        <script src="design/js/jquery.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="design/js/bootstrap.bundle.min.js"></script>
+        <script src="design/js/sb-admin-2.min.js"></script>
+        <script src="design/js/main.js"></script>
 
-</body>
+    </body>
 
 </html>
+
+
+
+            
+            
+
+
 
