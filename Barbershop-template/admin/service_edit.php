@@ -8,11 +8,10 @@
     $main = new Template("design/index.html");
 
 
-    $site_page = new Template("design/web-site.html");
-
-    $main->setContent("site", $site_page->get());
+    $edit_service = new Template("design/service-edit.html");
 
 
+    $main->setContent("edit_service", $edit_service->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
 

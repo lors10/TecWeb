@@ -1,264 +1,58 @@
-<!-- tables services -->
 <div class="card shadow mb-4">
-    <div class="card-header tab" style="padding: 0px !important;background: #36b9cc!important">
-        <button class="tablinks active" onclick="openTab(event, 'Upcoming')">
-            Upcoming Services
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'All')">
-            All Services
-        </button>
-        <button class="tablinks" onclick="openTab(event, 'Canceled')">
-            Canceled Services
-        </button>
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Services</h6>
     </div>
     <div class="card-body">
-        <div class="table-responsive">
-            <!-- table 1-->
-            <table class="table table-bordered tabcontent" id="Upcoming" style="display:table" width="100%" cellspacing="0">
-                <thead>
+
+        <!-- ADD NEW SERVICE BUTTON -->
+
+        <a href="service_add.php" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
+            <i class="fa fa-plus"></i>
+            Add Service
+        </a>
+
+        <!-- SERVICES TABLE -->
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Service Name</th>
+                <th scope="col">Service Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Manage</th>
+            </tr>
+            </thead>
+            <tbody>
                 <tr>
-                    <th>
-                        Start Time
-                    </th>
-                    <th>
-                        Booked Services
-                    </th>
-                    <th>
-                        End Time Expected
-                    </th>
-                    <th>
-                        Client
-                    </th>
-                    <th>
-                        Employee
-                    </th>
-                    <th>
-                        Manage
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td colspan='5' style='text-align:center;'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <a href = #></a>
-                    </td>
-                    <td>
-                    </td>
+                    <td></td>
+                    <td></td>
+                    <td style = 'width:30%'></td>
+                    <td></td>
+                    <td></td>
                     <td>
                         <ul class="list-inline m-0">
 
-                            <!-- CANCEL BUTTON -->
+                            <!-- EDIT BUTTON -->
 
-                            <li class="list-inline-item" data-toggle="tooltip" title="Cancel Appointment">
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $cancel_data; ?>" data-placement="top">
-                                    <i class="fas fa-calendar-times"></i>
+                            <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                                <button class="btn btn-success btn-sm rounded-0">
+                                    <a href="service_edit.php" style="color: white;">
+                                        <i class="fa fa-edit"></i>
+                                    </a>
                                 </button>
+                            </li>
 
-                                <!-- CANCEL MODAL -->
-                                <div class="modal fade" id="" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Cancel Appointment</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Are you sure you want to cancel this appointment?</p>
-                                                <div class="form-group">
-                                                    <label>Tell Us Why?</label>
-                                                    <textarea class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                <button type="button" data-id = "" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <!-- DELETE BUTTON -->
 
+                            <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top"><i class="fa fa-trash"></i></button>
                             </li>
                         </ul>
                     </td>
                 </tr>
-                </tbody>
-            </table>
-            <!-- table 2 -->
-            <table class="table table-bordered tabcontent" id="All"  width="100%" cellspacing="0">
-                <thead>
-                <tr>
-                    <th>
-                        Start Time
-                    </th>
-                    <th>
-                        Booked Services
-                    </th>
-                    <th>
-                        End Time Expected
-                    </th>
-                    <th>
-                        Client
-                    </th>
-                    <th>
-                        Employee
-                    </th>
-                    <th>
-                        Manage
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td colspan='5' style='text-align:center;'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <a href = #></a>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <ul class="list-inline m-0">
-
-                            <!-- CANCEL BUTTON -->
-
-                            <li class="list-inline-item" data-toggle="tooltip" title="Cancel Appointment">
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $cancel_data; ?>" data-placement="top">
-                                    <i class="fas fa-calendar-times"></i>
-                                </button>
-
-                                <!-- CANCEL MODAL -->
-                                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<?php echo $cancel_data; ?>" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Cancel Appointment</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Are you sure you want to cancel this appointment?</p>
-                                                <div class="form-group">
-                                                    <label>Tell Us Why?</label>
-                                                    <textarea class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                <button type="button" data-id = "" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <!-- table 3-->
-            <table class="table table-bordered tabcontent"  id="Canceled" width="100%" cellspacing="0">
-                <thead>
-                <tr>
-                    <th>
-                        Start Time
-                    </th>
-                    <th>
-                        Booked Services
-                    </th>
-                    <th>
-                        End Time Expected
-                    </th>
-                    <th>
-                        Client
-                    </th>
-                    <th>
-                        Employee
-                    </th>
-                    <th>
-                        Manage
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td colspan='5' style='text-align:center;'>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <a href = #></a>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        <ul class="list-inline m-0">
-
-                            <!-- CANCEL BUTTON -->
-
-                            <li class="list-inline-item" data-toggle="tooltip" title="Cancel Appointment">
-                                <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#<?php echo $cancel_data; ?>" data-placement="top">
-                                    <i class="fas fa-calendar-times"></i>
-                                </button>
-
-                                <!-- CANCEL MODAL -->
-                                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="<?php echo $cancel_data; ?>" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Cancel Appointment</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Are you sure you want to cancel this appointment?</p>
-                                                <div class="form-group">
-                                                    <label>Tell Us Why?</label>
-                                                    <textarea class="form-control"></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                                                <button type="button" data-id = "" class="btn btn-danger cancel_appointment_button">Yes, Cancel</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
