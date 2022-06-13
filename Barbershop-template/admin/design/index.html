@@ -59,26 +59,26 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Services & Images
+            Servizi & Immagini
         </div>
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
             <a class="nav-link" href="service_category.php">
                 <i class="fas fa-list"></i>
-                <span>Service Category</span>
+                <span>Categorie Servizi</span>
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="services.php">
                 <i class="bs bs-scissors-1"></i>
-                <span>Services</span>
+                <span>Servizi</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="images.php">
                 <i class="far fa-image"></i>
-                <span>Images</span>
+                <span>Immagini</span>
             </a>
         </li>
 
@@ -88,20 +88,20 @@
 
         <!-- Heading -->
         <div class="sidebar-heading">
-            Clients & Staff
+            Clienti & Staff
         </div>
 
         <!-- Nav Item - Charts -->
         <li class="nav-item">
             <a class="nav-link" href="clients.php">
                 <i class="far fa-address-card"></i>
-                <span>Clients</span>
+                <span>Clienti</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="appointment.php">
                 <i class="fas fa-calendar-week icon-ver"></i>
-                <span>Appointments</span>
+                <span>Appuntamenti</span>
             </a>
         </li>
         <li class="nav-item">
@@ -139,9 +139,9 @@
                 <!-- Topbar Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../" target="_blank">
+                        <a class="nav-link" href="../index.php" target="_blank">
                             <i class="far fa-eye"></i>
-                            <span style="margin-left: 5px;">View website</span>
+                            <span style="margin-left: 5px;">Vai al Sito</span>
                         </a>
                     </li>
                     <div class="topbar-divider d-none d-sm-block"></div>
@@ -159,15 +159,11 @@
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Profile
+                                Profilo
                             </a>
                             <a class="dropdown-item" href="#">
                                 <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Settings
-                            </a>
-                            <a class="dropdown-item" href="#">
-                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Activity Log
+                                Impostazioni
                             </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -192,7 +188,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                            Total Clients
+                                            Clienti Totali
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                     </div>
@@ -210,7 +206,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                            Total Services
+                                            Servizi Totali
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                     </div>
@@ -228,7 +224,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                            Employees
+                                            Dipendenti
                                         </div>
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-auto">
@@ -250,7 +246,7 @@
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                            Appointments
+                                            Appuntamenti
                                         </div>
                                         <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
                                     </div>
@@ -274,9 +270,13 @@
 
         <[edit_service]>
 
+        <[images]>
+
         <[clients]>
 
         <[employees]>
+
+        <[appointment]>
 
 
         <!-- Footer -->
@@ -298,16 +298,16 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Vuoi uscire dalla Dashboard ?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        Select "Logout" below if you are ready to end your current session.
+                        Seleziona Logout se vuoi terminare la seguente sessione.
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Indietro</button>
                         <a class="btn btn-primary" href="logout.php">Logout</a>
                     </div>
                 </div>

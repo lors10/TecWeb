@@ -1,33 +1,46 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Employees</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Dipendenti</h6>
     </div>
     <div class="card-body">
-
-        <!-- ADD NEW Employee BUTTON -->
-        <a href="#" class="btn btn-success btn-sm" style="margin-bottom: 10px;">
-            <i class="fa fa-plus"></i>
-            Add Employee
-        </a>
 
         <!-- Employees Table -->
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
-                <tr>
-                    <th scope="col">First Name</th>
-                    <th scope="col">Last Name</th>
-                    <th scope="col">Phone Number</th>
-                    <th scope="col">E-mail</th>
-                    <th scope="col">Manage</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Id Dipendente</th>
+                        <th scope="col">Nome Dipendente</th>
+                        <th scope="col">Cognome Dipendente</th>
+                        <th scope="col">Numero Dipendente</th>
+                        <th scope="col">E-mail Dipendente</th>
+                        <th scope="col">Azioni</th>
+                    </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td style="border-right: 0px;"></td>
+                        <td style="border-left: 0px; border-right: 0px;"></td>
+                        <td style="border-left: 0px; border-right: 0px;"></td>
+                        <td style="border-left: 0px; border-right: 0px;"></td>
+                        <td style="border-left: 0px; border-right: 0px;"></td>
+                        <td>
+
+                            <!-- ADD EMPLOY BUTTON -->
+
+                            <li class="list-inline-item" data-toggle="tooltip" title="Add">
+                                <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                                    <i class="fa fa-plus"></i> Add
+                                </button>
+                            </li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
                         <td>
                             <ul class="list-inline m-0">
 
@@ -36,7 +49,7 @@
                                 <li class="list-inline-item" data-toggle="tooltip" title="Edit">
                                     <button class="btn btn-success btn-sm rounded-0">
                                         <a href="#" style="color: white;">
-                                            <i class="fa fa-edit"></i>
+                                            <i class="fa fa-edit"></i> Edit
                                         </a>
                                     </button>
                                 </li>
@@ -44,7 +57,9 @@
                                 <!-- DELETE BUTTON -->
 
                                 <li class="list-inline-item" data-toggle="tooltip" title="Delete">
-                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top"><i class="fa fa-trash"></i></button>
+                                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                                        <i class="fa fa-trash"></i> Delete
+                                    </button>
                                 </li>
                             </ul>
                         </td>
