@@ -1,0 +1,59 @@
+<!-- SERVICES TABLE -->
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th scope="col">Nome Servizio</th>
+        <th scope="col">Nome Categoria</th>
+        <th scope="col">Descrizione Servizio</th>
+        <th scope="col">Prezzo Servizio</th>
+        <th scope="col">Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="border-right: 0px;"></td>
+        <td style="border-left: 0px; border-right: 0px;"></td>
+        <td style="border-left: 0px; border-right: 0px;"></td>
+        <td style="border-left: 0px; border-right: 0px;"></td>
+        <td>
+
+            <!-- ADD CATEGORY BUTTON -->
+
+            <li class="list-inline-item" data-toggle="tooltip" title="Add">
+                <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                    <i class="fa fa-plus"></i><a style= " color: white; text-decoration: none" href="services_add.php"> Add </a>
+                </button>
+            </li>
+        </td>
+    </tr>
+    <tr>
+        <[foreach]>
+        <td><[nomeAttivita]></td>
+        <td><[nomeCategoria]></td>
+        <td><[descrizioneAttivita]></td>
+        <td><[prezzoAttivita]></td>
+        <td>
+            <ul class="list-inline m-0">
+
+                <!-- EDIT BUTTON -->
+
+                <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                    <button class="btn btn-success btn-sm rounded-0">
+                        <i class="fa fa-edit"></i><a style="color: white; text-decoration: none" href="services_edit.php"> Edit </a>
+                    </button>
+                </li>
+
+                <!-- DELETE BUTTON -->
+
+                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                    <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-placement="top">
+                        <i class="fa fa-trash"></i><a style="color: white; text-decoration: none" href="services_delete.php?delete=<[nomeAttivita]>"> Delete </a>
+                    </button>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <[/foreach]>
+    </tbody>
+</table>

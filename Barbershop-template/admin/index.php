@@ -6,8 +6,18 @@
 
     $main = new Template("design/index.html");
 
+    $stmt = $connection->query("SELECT * FROM attivita");
 
-    $main->setContent("loggedUser", $_SESSION['name']);
-    $main->close();
+        if (!$stmt){
+
+            // error
+        }
+
+        $data = $stmt->num_rows;
+
+
+        $main->setContent("serviceCount", $data);
+        $main->setContent("loggedUser", $_SESSION['name']);
+        $main->close();
 
 ?>

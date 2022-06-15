@@ -1,24 +1,29 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Add New Service</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Aggiungi un nuovo Servizio</h6>
     </div>
     <div class="card-body">
-        <form method="POST" action="#">
+        <form method="POST" action="services_add.php">
             <div class="row">
+
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="service_name">Service Name</label>
-                        <input type="text" class="form-control" value="" placeholder="Service Name" name="service_name">
-                            <div class="invalid-feedback" style="display: block;">
-                                Service name is required.
-                            </div>
+                        <label for="service_name">Nome del Servizio</label>
+                        <input type="text" class="form-control" value="" placeholder="Nome Servizio" name="service_name" required>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="service_category">Service Category</label>
+                        <label for="service_category">Categoria del Servizio</label>
                         <select class="custom-select" name="service_category">
-                            <option value = ""></option>
+                            <[foreach]>
+                            <option value="<[idCategoria]>" name="service_category"><[nomeCategoria]></option>
+                            <[/foreach]>
                         </select>
                     </div>
                 </div>
@@ -26,40 +31,16 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="service_duration">Service Duration(min)</label>
-                        <input type="text" class="form-control" value="" placeholder="Service Duration" name="service_duration">
-                        <div class="invalid-feedback" style="display: block;">
-                            Service duration is required.
-                        </div>
-                        <div class="invalid-feedback" style="display: block;">
-                            Invalid duration.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="service_price">Service Price($)</label>
-                        <input type="text" class="form-control" value="" placeholder="Service Price" name="service_price">
-                        <div class="invalid-feedback" style="display: block;">
-                            Service price is required.
-                        </div>
-                        <div class="invalid-feedback" style="display: block;">
-                            Invalid price.
-                        </div>
+                        <label for="service_price">Prezzo del Servizio($)</label>
+                        <input type="text" class="form-control" value="" placeholder="Prezzo Servizio" name="service_price" required>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <label for="service_description">Service Description</label>
-                        <textarea class="form-control" name="service_description" style="resize: none;"></textarea>
-                        <div class="invalid-feedback" style="display: block;">
-                            Service description is required.
-                        </div>
-                        <div class="invalid-feedback" style="display: block;">
-                            The length of the description should be less than 250 letters.
-                        </div>
+                        <label for="service_description">Descrizione del Servizio</label>
+                        <textarea class="form-control" name="service_description" style="resize: none;" required placeholder="Descrizione servizio"></textarea>
                     </div>
                 </div>
             </div>

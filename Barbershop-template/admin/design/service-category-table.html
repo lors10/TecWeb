@@ -1,0 +1,99 @@
+<!-- Categories Table -->
+<div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+        <tr>
+            <th>Id Categoria</th>
+            <th>Nome Categoria</th>
+            <th>Descrizione Categoria</th>
+            <th>Azioni</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="border-right: 0px;"></td>
+            <td style="border-left: 0px; border-right: 0px;"></td>
+            <td style="border-left: 0px; border-right: 0px;"></td>
+            <td>
+
+                <!-- ADD CATEGORY BUTTON -->
+
+                <li class="list-inline-item" data-toggle="tooltip" title="Add">
+                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#add_new_category" data-placement="top">
+                        <i class="fa fa-plus"></i> Add
+                    </button>
+                </li>
+            </td>
+        </tr>
+        <[foreach]>
+        <tr>
+            <td><[idCategoria]></td>
+            <td><[nomeCategoria]></td>
+            <td><[descrizioneCategoria]></td>
+            <td>
+
+                <ul class="list-inline m-0">
+
+                    <!-- EDIT CATEGORY BUTTON -->
+
+                    <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#edit_category" data-placement="top">
+                            <i class="fa fa-edit"></i> Edit
+                        </button>
+                    </li>
+
+                    <!-- DELETE CATEGORY BUTTON -->
+
+                    <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#delete_category" data-placement="top">
+                            <i class="fa fa-trash"></i><a style="color: white; text-decoration: none" href="service_category_delete.php?delete=<[idCategoria]>"> Delete</a>
+                        </button>
+
+
+                </ul>
+            </td>
+        </tr>
+        <[/foreach]>
+        </tbody>
+    </table>
+
+    <!-- Add New Category Modal -->
+    <div class="modal fade" id="add_new_category" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aggiungi una nuova Categoria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="service_category_add.php">
+
+                        <!-- VALUE INPUT -->
+                        <div class="form-group">
+                            <input type="hidden" name="state" value="1">
+                        </div>
+
+                        <!-- CATEGORY INPUT-->
+                        <div class="form-group">
+                            <label> Nome Categoria</label>
+                            <input type="text" name="category_name" class="form-control" placeholder="Nome Categoria" required>
+                        </div>
+
+                        <!-- CATEGORY DESCRIPTION INPUT -->
+                        <div class="form-group">
+                            <label>Descrizione Categoria</label>
+                            <input type="text" name="category_description" class="form-control" placeholder="Descrizione Categoria" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Indietro</button>
+                        <button type="submit" class="btn btn-secondary">Aggiungi Categoria</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

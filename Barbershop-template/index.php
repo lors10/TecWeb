@@ -1,6 +1,7 @@
 <?php
 
     require ("include/template2.inc.php");
+    require ("include/dbms.inc.php");
 
 
 
@@ -12,6 +13,23 @@
 
     // sezione servizi: servizi.html
     $services = new Template("design/servizi.html");
+
+    $stmt = $connection->query("SELECT nomeAttivita, descrizioneAttivita FROM attivita WHERE prezzoAttivita <= 15");
+
+    if (!$stmt) {
+
+        // errore
+    }
+
+    do {
+
+        $data = $stmt->fetch_assoc();
+        if ($data){
+            foreach ($data as $key => $value) {
+                $services->setContent($key, $value);
+            }
+        }
+    } while ($data);
 
     // sezione appuntamento: appuntamento.html
     $appointment = new Template("design/appuntamento.html");
@@ -25,6 +43,31 @@
     // sezione prezzi: prezzi.html
     $prices = new Template("design/prezzi.html");
 
+    /*
+    $stmt = $connection->query("SELECT categoriaAttivita.idCategoria, categoriaAttivita.nomeCategoria, 
+                                                attivita.idCategoria, attivita.nomeAttivita, attivita.descrizioneAttivita, attivita.prezzoAttivita
+                                                  FROM categoriaAttivita
+                                                  LEFT JOIN attivita
+                                                  ON categoriaAttivita.idCategoria = attivita.idCategoria");
+
+    */
+
+    $stmt = $connection->query("SELECT * FROM attivita LEFT JOIN categoriaAttivita ON attivita.idCategoria = categoriaAttivita.idCategoria");
+
+    if (!$stmt) {
+
+        // errore
+    }
+
+    do {
+
+        $data = $stmt->fetch_assoc();
+        if ($data){
+            foreach ($data as $key => $value) {
+                $prices->setContent($key, $value);
+            }
+        }
+    } while ($data);
 
 
     $main->setContent("carosello", $carosel->get());
