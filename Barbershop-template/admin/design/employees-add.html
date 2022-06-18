@@ -1,0 +1,55 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Aggiungi un nuovo Dipendente</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="employees_add.php">
+            <div class="row">
+
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nome Dipendente</label>
+                        <input type="text" class="form-control" value="" placeholder="Nome Dipendente" name="employer_name" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Cognome Dipendente</label>
+                        <input type="text" class="form-control" value="" placeholder="Cognome Dipendente" name="employer_surname" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Immagine Dipendente</label>
+                        <select class="custom-select" name="employer_image_id">
+                            <[foreach]>
+                            <option value="<[idImmagine]>" name="employer_image_id"><[idImmagine]> - <[alt]></option>
+                            <[/foreach]>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>N. Cellulare Dipendente</label>
+                        <input type="text" class="form-control" value="" placeholder="Cellulare Dipendente" name="employer_phone" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>E-Mail Dipendente</label>
+                        <input type="email" class="form-control" value="" placeholder="Email Dipendente" name="employer_mail">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="add_new_service" class="btn btn-primary">Aggiungi Dipendente</button>
+        </form>
+
+    </div>
+</div>

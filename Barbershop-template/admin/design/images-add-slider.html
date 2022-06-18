@@ -1,0 +1,47 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Aggiungi una nuova Slide</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="images_slider_add.php">
+            <div class="row">
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Slider</label>
+                        <select class="custom-select" name="slider_id">
+                            <[foreach]>
+                            <option name="slider_id" value="<[idImmagine]>"><[alt]></option>
+                            <[/foreach]>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id posizione Slider</label>
+                        <input type="text" class="form-control" value="" placeholder="Es. 0" name="slider_position" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Titolo Slider</label>
+                        <input type="text" class="form-control" value="" placeholder="Titolo Slider" name="slider_title" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Testo Slider</label>
+                        <input type="text" class="form-control" value="" placeholder="Testo Slider" name="slider_body" required>
+                    </div>
+                </div>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="add_new_service" class="btn btn-primary">Aggiungi Slide</button>
+        </form>
+    </div>
+</div>

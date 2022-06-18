@@ -6,7 +6,7 @@
     require("../include/session-start.php");
 
     $main = new Template("design/index.html");
-    $add_service = new Template("design/service-add.html");
+    $add_employer = new Template("design/employees-add.html");
 
 
     if (!isset($_REQUEST['state'])) {
@@ -18,35 +18,34 @@
 
         case 0:
 
-            // emissione form
+            // estraggo id immagine per l'immagine del dipendente
 
-            // estrapolo categorie di servizi
-            $stmt = $connection->query("SELECT idCategoria, nomeCategoria FROM categoriaAttivita");
+            $stmt = $connection->query("SELECT idImmagine, alt FROM immagini");
 
             while ($data = $stmt->fetch_assoc()) {
 
                 foreach ($data as $key => $value) {
 
-                    $add_service->setContent($key,$value);
+                    $add_employer->setContent($key,$value);
                 }
             }
 
             break;
 
+
         case 1:
 
-            // query per aggiungere un servizio
-            // notifica di aggiunta
+            // operazione di insert e notifica di successo
 
-
-            $query = "INSERT into attivita (idAttivita, idCategoria, nomeAttivita, descrizioneAttivita, prezzoAttivita)
-                            VALUES (NULL, {$_REQUEST['service_category']}, '{$_REQUEST['service_name']}', '{$_REQUEST['service_description']}', {$_REQUEST['service_price']})";
+            $query = "INSERT into  dipendenti (idDipendente, idImmagine, nomeDipendente, cognomeDipendente, cellulareDipendente, emailDipendente)
+                            VALUES (NULL, {$_REQUEST['employer_image_id']}, '{$_REQUEST['employer_name']}', '{$_REQUEST['employer_surname']}',
+                                    '{$_REQUEST['employer_phone']}', '{$_REQUEST['employer_mail']}')";
 
             if ($connection->query($query) == 1) {
 
                 echo "Categoria aggiunta con successo!";
 
-                header("Location: services.php");
+                header("Location: employees.php");
             } else {
 
                 // check errore
@@ -54,13 +53,19 @@
             }
 
             break;
+
+
+            break;
     }
+
+
 
     $stmt = $connection->query("SELECT * FROM attivita");
 
     $serviceCount = $stmt->num_rows;
 
     $main->setContent("serviceCount", $serviceCount);
+
 
 
     $stmt = $connection->query("SELECT * FROM dipendenti");
@@ -70,19 +75,20 @@
     $main->setContent("employeesCount", $employeesCount);
 
 
+
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
-                                            utentiGruppi.idUtente, utentiGruppi.idGruppo
-                                            FROM utenti
-                                            LEFT JOIN utentiGruppi
-                                            ON utenti.idUtente = utentiGruppi.idUtente
-                                            WHERE utentiGruppi.idGruppo = 2");
+                                                utentiGruppi.idUtente, utentiGruppi.idGruppo
+                                                FROM utenti
+                                                LEFT JOIN utentiGruppi
+                                                ON utenti.idUtente = utentiGruppi.idUtente
+                                                WHERE utentiGruppi.idGruppo = 2");
 
     $clientsCount = $stmt->num_rows;
 
     $main->setContent("clientsCount", $clientsCount);
 
 
-    $main->setContent("add_service", $add_service->get());
+    $main->setContent("add_employer", $add_employer->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
 

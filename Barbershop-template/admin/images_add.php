@@ -1,18 +1,15 @@
 <?php
 
-
-    require("../include/dbms.inc.php");
-    require("../include/template2.inc.php");
-    require("../include/session-start.php");
+    require ("../include/dbms.inc.php");
+    require ("../include/template2.inc.php");
+    require ("../include/session-start.php");
 
     $main = new Template("design/index.html");
-    $add_service = new Template("design/service-add.html");
-
+    $add_images = new Template("design/images-add.html");
 
     if (!isset($_REQUEST['state'])) {
         $_REQUEST['state'] = 0;
     }
-
 
     switch ($_REQUEST['state']) {
 
@@ -20,47 +17,57 @@
 
             // emissione form
 
-            // estrapolo categorie di servizi
-            $stmt = $connection->query("SELECT idCategoria, nomeCategoria FROM categoriaAttivita");
-
-            while ($data = $stmt->fetch_assoc()) {
-
-                foreach ($data as $key => $value) {
-
-                    $add_service->setContent($key,$value);
-                }
-            }
 
             break;
 
         case 1:
 
-            // query per aggiungere un servizio
+            // query per aggiungere un'immagine
             // notifica di aggiunta
 
+            /*
 
-            $query = "INSERT into attivita (idAttivita, idCategoria, nomeAttivita, descrizioneAttivita, prezzoAttivita)
-                            VALUES (NULL, {$_REQUEST['service_category']}, '{$_REQUEST['service_name']}', '{$_REQUEST['service_description']}', {$_REQUEST['service_price']})";
+                $query = "INSERT into attivita (idAttivita, idCategoria, nomeAttivita, descrizioneAttivita, prezzoAttivita)
+                                VALUES (NULL, {$_REQUEST['service_category']}, '{$_REQUEST['service_name']}', '{$_REQUEST['service_description']}', {$_REQUEST['service_price']})";
+
+                if ($connection->query($query) == 1) {
+
+                    echo "Categoria aggiunta con successo!";
+
+                    header("Location: services.php");
+                } else {
+
+                    // check errore
+                    echo "Errore: " . $query . '<br />' . $connection->connect_error;
+                }
+
+            */
+
+            $query = "INSERT into immagini (idImmagine, path, alt)
+                            VALUES (NULL, '{$_REQUEST['image_path']}', '{$_REQUEST['image_alt']}')";
 
             if ($connection->query($query) == 1) {
 
-                echo "Categoria aggiunta con successo!";
+                echo "Immagine aggiunta con successo!";
 
-                header("Location: services.php");
+                header("Location: images.php");
             } else {
 
                 // check errore
                 echo "Errore: " . $query . '<br />' . $connection->connect_error;
             }
 
+
             break;
     }
+
 
     $stmt = $connection->query("SELECT * FROM attivita");
 
     $serviceCount = $stmt->num_rows;
 
     $main->setContent("serviceCount", $serviceCount);
+
 
 
     $stmt = $connection->query("SELECT * FROM dipendenti");
@@ -70,6 +77,7 @@
     $main->setContent("employeesCount", $employeesCount);
 
 
+
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
                                             utentiGruppi.idUtente, utentiGruppi.idGruppo
                                             FROM utenti
@@ -77,14 +85,13 @@
                                             ON utenti.idUtente = utentiGruppi.idUtente
                                             WHERE utentiGruppi.idGruppo = 2");
 
-    $clientsCount = $stmt->num_rows;
+    $employeesCount = $stmt->num_rows;
 
-    $main->setContent("clientsCount", $clientsCount);
+    $main->setContent("clientsCount", $employeesCount);
 
 
-    $main->setContent("add_service", $add_service->get());
+    $main->setContent("add_images", $add_images->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
-
 
 ?>

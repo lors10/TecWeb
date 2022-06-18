@@ -6,18 +6,39 @@
 
     $main = new Template("design/index.html");
 
+
+
+    $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
+                                        utentiGruppi.idUtente, utentiGruppi.idGruppo
+                                        FROM utenti
+                                        LEFT JOIN utentiGruppi
+                                        ON utenti.idUtente = utentiGruppi.idUtente
+                                        WHERE utentiGruppi.idGruppo = 2");
+
+    $data = $stmt->num_rows;
+
+    $main->setContent("clientsCount", $data);
+
+
+
+
     $stmt = $connection->query("SELECT * FROM attivita");
 
-        if (!$stmt){
+    $data = $stmt->num_rows;
 
-            // error
-        }
-
-        $data = $stmt->num_rows;
+    $main->setContent("serviceCount", $data);
 
 
-        $main->setContent("serviceCount", $data);
-        $main->setContent("loggedUser", $_SESSION['name']);
-        $main->close();
+
+    $stmt = $connection->query("SELECT * FROM dipendenti");
+
+    $data = $stmt->num_rows;
+
+    $main->setContent("employeesCount", $data);
+
+
+
+    $main->setContent("loggedUser", $_SESSION['name']);
+    $main->close();
 
 ?>

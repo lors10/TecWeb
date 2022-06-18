@@ -1,30 +1,24 @@
 <?php
 
-
     require("../include/dbms.inc.php");
     require("../include/template2.inc.php");
     require("../include/session-start.php");
 
     $main = new Template("design/index.html");
-    $clients_page = new Template("design/employees.html");
-    $employe_table = new Template("design/employees-table.html");
+    $profile = new Template("design/profile.html");
 
-    $stmt = $connection->query("SELECT * FROM dipendenti");
 
-    if (!$stmt) {
 
-        //error
+    $stmt = $connection->query("SELECT * FROM utenti WHERE idUtente={$_SESSION['id']}");
+
+    while ($data = $stmt->fetch_assoc()) {
+
+        foreach ($data as $key => $value) {
+
+            $profile->setContent($key,$value);
+        }
     }
 
-    do {
-
-        $data = $stmt->fetch_assoc();
-        if ($data){
-            foreach ($data as $key => $value) {
-                $employe_table->setContent($key, $value);
-            }
-        }
-    } while ($data);
 
 
 
@@ -35,11 +29,13 @@
     $main->setContent("serviceCount", $serviceCount);
 
 
+
     $stmt = $connection->query("SELECT * FROM dipendenti");
 
     $employeesCount = $stmt->num_rows;
 
     $main->setContent("employeesCount", $employeesCount);
+
 
 
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
@@ -55,10 +51,10 @@
 
 
 
-    $clients_page->setContent("employeesTable", $employe_table->get());
-    $main->setContent("employees", $clients_page->get());
+    $main->setContent("profile", $profile->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
 
 
 ?>
+

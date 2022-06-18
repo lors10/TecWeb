@@ -1,0 +1,68 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Profilo Amministratore</h6>
+    </div>
+    <form method="POST" action="#">
+        <div class="card-body">
+            <div class=" card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-1 font-weight-bold text-primary">Informazioni Personali</h6>
+                </div>
+
+                <div class="card-header py-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Nome Amministratore</label>
+                            <input type="text" class="form-control" value="<[nomeUtente]>" name="admin_name" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Cognome Amministratore</label>
+                            <input type="text" class="form-control" value="<[cognomeUtente]>" name="admin_surname" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Numero Amministratore</label>
+                            <input type="text" class="form-control" value="<[cellulareUtente]>" name="admin_number" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-1 font-weight-bold text-primary">Informazioni Account</h6>
+                </div>
+
+                <div class="card-header py-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Username Amministratore</label>
+                            <input type="text" class="form-control" value="<[username]>" name="admin_username" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Password Amministratore</label>
+                            <input type="text" class="form-control" value="<[password]>" name="admin_password" disabled>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- EDIT & GO BACK BUTTON -->
+            <button type="submit" class="btn btn-secondary">
+                <a href="index.php" style="color: white; text-decoration: none"> Indietro</a>
+            </button>
+
+            <button type="submit" name="add_new_service" class="btn btn-primary">
+                <a href="#" style="color: white; text-decoration: none"> Modifica Account</a>
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,11 +1,12 @@
 <?php
 
-    require ("../include/dbms.inc.php");
-    require ("../include/template2.inc.php");
-    require ("../include/session-start.php");
+    require("../include/dbms.inc.php");
+    require("../include/template2.inc.php");
+    require("../include/session-start.php");
 
     $main = new Template("design/index.html");
-    $appointment = new Template("design/appointments.html");
+    $setting = new Template("design/setting.html");
+
 
     $stmt = $connection->query("SELECT * FROM attivita");
 
@@ -24,19 +25,25 @@
 
 
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
-                                                utentiGruppi.idUtente, utentiGruppi.idGruppo
-                                                FROM utenti
-                                                LEFT JOIN utentiGruppi
-                                                ON utenti.idUtente = utentiGruppi.idUtente
-                                                WHERE utentiGruppi.idGruppo = 2");
+                                                    utentiGruppi.idUtente, utentiGruppi.idGruppo
+                                                    FROM utenti
+                                                    LEFT JOIN utentiGruppi
+                                                    ON utenti.idUtente = utentiGruppi.idUtente
+                                                    WHERE utentiGruppi.idGruppo = 2");
 
     $clientsCount = $stmt->num_rows;
 
     $main->setContent("clientsCount", $clientsCount);
 
 
-    $main->setContent("appointment", $appointment->get());
+
+
+
+
+
+    $main->setContent("setting", $setting->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
+
 
 ?>

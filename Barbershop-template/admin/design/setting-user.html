@@ -1,0 +1,77 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Utenti</h6>
+    </div>
+    <form method="POST" action="#">
+        <div class="card-body">
+            <div class=" card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-1 font-weight-bold text-primary">Utenti Clienti</h6>
+                </div>
+
+                <div class="card-header py-3">
+
+                    <!-- SERVICES TABLE -->
+
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Id Utente</th>
+                            <th scope="col">Nome Utente</th>
+                            <th scope="col">Cognome Utente</th>
+                            <th scope="col">Id Gruppo</th>
+                            <th scope="col">Nome Gruppo</th>
+                            <th scope="col">Descrizione Gruppo</th>
+                            <th scope="col">Azioni</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="border-right: 0px;"></td>
+                            <td style="border-left: 0px; border-right: 0px;"></td>
+                            <td style="border-left: 0px; border-right: 0px;"></td>
+                            <td style="border-left: 0px; border-right: 0px;"></td>
+                            <td style="border-left: 0px; border-right: 0px;"></td>
+                            <td style="border-left: 0px; border-right: 0px;"></td>
+                            <td>
+
+                                <!-- ADD CATEGORY BUTTON -->
+
+                                <li class="list-inline-item" data-toggle="tooltip" title="Add">
+                                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                                        <i class="fa fa-plus"></i><a style= " color: white; text-decoration: none" href="#"> Add </a>
+                                    </button>
+                                </li>
+                            </td>
+                        </tr>
+                        <tr>
+                            <[foreach]>
+                            <td><[idUtente]></td>
+                            <td><[nomeUtente]></td>
+                            <td><[cognomeUtente]></td>
+                            <td><[idGruppo]></td>
+                            <td><[nomeGruppo]></td>
+                            <td><[descrizioneGruppo]></td>
+                            <td>
+                                <ul class="list-inline m-0">
+
+                                    <!-- DELETE BUTTON -->
+
+                                    <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-placement="top">
+                                            <i class="fa fa-trash"></i><a style="color: white; text-decoration: none" href="#"> Delete </a>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <[/foreach]>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>

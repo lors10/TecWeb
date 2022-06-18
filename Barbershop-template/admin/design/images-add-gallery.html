@@ -1,0 +1,27 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Aggiungi una nuova immagine in Galleria</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="images_gallery_add.php">
+            <div class="row">
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Immagine Galleria</label>
+                        <select class="custom-select" name="slider_id">
+                            <[foreach]>
+                            <option name="slider_id" value="<[idImmagine]>"><[alt]></option>
+                            <[/foreach]>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="add_new_service" class="btn btn-primary">Aggiungi Immagine</button>
+        </form>
+    </div>
+</div>
