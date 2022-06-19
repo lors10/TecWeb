@@ -17,9 +17,10 @@
             <div class="login">
                 <form class="login-container validate-form" name="login-form" method="POST" action="#" onsubmit="return validateLogInForm()">
 				    <span class="login100-form-title p-b-32">
-					    Barber Login
+					    Barber Shop Login
 				    </span>
 
+                    <!--
                     <div class="alert alert-danger">
                         <button data-dismiss="alert" class="close close-sm" type="button">
                             <span aria-hidden="true">×</span>
@@ -28,38 +29,47 @@
                             <div>Username and/or password are incorrect!</div>
                         </div>
                     </div>
+                    -->
+
+                    <[message]>
+
+                    <!-- VALUE INPUT -->
+                    <div class="form-input">
+                        <input type="hidden" name="state" value="1">
+                    </div>
 
                     <!-- USERNAME INPUT -->
                     <div class="form-input">
                         <!-- <span class="txt1">Username</span> -->
                         <input type="text" name="username" class="form-control" placeholder="Username" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
-                        <span class="invalid-feedback" id="required_username">Username is required!</span>
+                        <span class="invalid-feedback" id="required_username">Username richiesta!</span>
                     </div>
 
                     <!-- PASSWORD INPUT -->
                     <div class="form-input">
                         <input type="password" name="password" class="form-control" placeholder="Password" oninput = "getElementById('required_password').style.display = 'none'" autocomplete="new-password">
-                        <span class="invalid-feedback" id="required_password">Password is required!</span>
+                        <span class="invalid-feedback" id="required_password">Password richiesta!</span>
                     </div>
 
                     <!-- SIGN IN BUTTON -->
                     <p>
-                        <button type="submit" name="signin-button" >Sign In</button>
+                        <button type="submit" name="signin-button" >Accedi</button>
                     </p>
 
                     <!-- GO BACK BUTTON to Barber website -->
                     <p>
-                        <button type="goback" name="goback-button" class="goback-button"><a class="back" href="index.php">Go Back</a></button>
+                        <button type="goback" name="goback-button" class="goback-button"><a class="back" href="index.php">Indietro</a></button>
                     </p>
 
                     <!-- SIGN UP LINK -->
-                    <span class="forgotPW">Don't have an account ? <a href="signup.php">Register here.</a></span>
+                    <span class="forgotPW">Non hai un account ? <a href="signup.php">Registrati qui.</a></span>
 
-                    <!-- AMMINISTRATOR LINK -->
+                    <!-- AMMINISTRATOR LINK
                     <span class="forgotPW">Are you an administrator ? <a href="admin/login.php" target="_blank" rel="noopener">Click here</a></span>
+                    -->
 
                     <!-- FORGOT YOUR PASSWORD LINK -->
-                    <span class="forgotPW">Forgot your password ? <a href="#">Reset it here.</a></span>
+                    <span class="forgotPW">Hai dimenticato la password ? <a href="#">Clicca qui.</a></span>
                 </form>
             </div>
 
