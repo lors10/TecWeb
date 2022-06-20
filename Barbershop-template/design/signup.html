@@ -14,10 +14,13 @@
         </head>
         <body>
             <div class="login">
-                <form class="login-container validate-form" name="signup-form" method="POST" action="#" onsubmit="return validateSignUpForm()">
+                <form class="login-container validate-form" name="signup-form" method="POST" action="signup.php" onsubmit="return validateSignUpForm()">
 				    <span class="login100-form-title p-b-32">
-					    Barber Sign Up
+					    Barber Shop Sign Up
 				    </span>
+
+                    <!--
+
                     <div class="alert alert-danger">
                         <button data-dismiss="alert" class="close close-sm" type="button">
                             <span aria-hidden="true">×</span>
@@ -27,50 +30,65 @@
                         </div>
                     </div>
 
+                    -->
+
+                    <[message]>
+
+                    <!-- VALUE INPUT -->
+                    <div class="form-input">
+                        <input type="hidden" name="state" value="1">
+                    </div>
+
                     <!-- NAME INPUT -->
                     <div class="form-input">
-                        <input type="text" name="name" class="form-control" placeholder="Name" oninput = "getElementById('required_name').style.display = 'none'" autocomplete="off">
-                        <span class="invalid-feedback" id="required_name">Name is required!</span>
+                        <input type="text" name="name" class="form-control" placeholder="Nome" oninput = "getElementById('required_name').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_name">Nome richiesto!</span>
                     </div>
 
                     <!-- SURNAME INPUT -->
                     <div class="form-input">
-                        <input type="text" name="surname" class="form-control" placeholder="Surname" oninput = "getElementById('required_surname').style.display = 'none'" autocomplete="off">
-                        <span class="invalid-feedback" id="required_surname">Surname is required!</span>
+                        <input type="text" name="surname" class="form-control" placeholder="Cognome" oninput = "getElementById('required_surname').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_surname">Cognome richiesto!</span>
                     </div>
 
                     <!-- PHONE INPUT -->
                     <div class="form-input">
-                        <input type="tel" name="number" class="form-control" placeholder="Phone number" oninput = "getElementById('required_number').style.display = 'none'" autocomplete="off">
-                        <span class="invalid-feedback" id="required_number">Phone number is required!</span>
+                        <input type="tel" name="number" class="form-control" placeholder="Numero di telefono" oninput = "getElementById('required_number').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_number">Numero di telefono richiesto!</span>
                     </div>
 
                     <!-- USERNAME INPUT -->
                     <div class="form-input">
                         <input type="text" name="username" class="form-control" placeholder="Username" oninput = "getElementById('required_username').style.display = 'none'" autocomplete="off">
-                        <span class="invalid-feedback" id="required_username">Username is required!</span>
+                        <span class="invalid-feedback" id="required_username">Username richiesta!</span>
+                    </div>
+
+                    <!-- USERNAME INPUT -->
+                    <div class="form-input">
+                        <input type="email" name="mail" class="form-control" placeholder="E-mail" oninput = "getElementById('required_mail').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_mail">E-mail richiesta!</span>
                     </div>
 
                     <!-- PASSWORD INPUT -->
                     <div class="form-input">
-                        <input type="password" name="password" class="form-control" placeholder="Password" oninput = "getElementById('required_password').style.display = 'none'" autocomplete="new-password">
-                        <span class="invalid-feedback" id="required_password">Password is required!</span>
+                        <input type="password" name="password" class="form-control" placeholder="Password" oninput = "getElementById('required_password').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_password">Password richiesta!</span>
                     </div>
 
                     <!-- PASSWORD INPUT -->
                     <div class="form-input">
-                        <input type="password" name="confirm_password" class="form-control" placeholder="Confirm Password" oninput = "getElementById('required_confirm_password').style.display = 'none'" autocomplete="new-password">
-                        <span class="invalid-feedback" id="required_confirm_password">Password is required!</span>
+                        <input type="password" name="confirm_password" class="form-control" placeholder="Conferma Password" oninput = "getElementById('required_confirm_password').style.display = 'none'" autocomplete="off">
+                        <span class="invalid-feedback" id="required_confirm_password">La password non corrisponde!</span>
                     </div>
 
                     <!-- SIGN IN BUTTON -->
                     <p>
-                        <button type="submit" name="signin-button">Sign In</button>
+                        <button type="submit" name="signup-button">Registrati</button>
                     </p>
 
                     <!-- GO BACK BUTTON to Barber website -->
                     <p>
-                        <button type="goback" name="goback-button" class="goback-button"><a class="back" href="login.php">Go Back</a></button>
+                        <button type="goback" name="goback-button" class="goback-button"><a class="back" href="login.php">Indietro</a></button>
                     </p>
                 </form>
             </div>

@@ -146,6 +146,24 @@
     // sezione appuntamento: appuntamento.html
     $appointment = new Template("design/appuntamento.html");
 
+    if ($log != 0) {
+
+        $appointment->setContent("goToappointemnt", "<button id=\"app_submit\" type=\"submit\" class=\"default_btn_ma\">
+                                                                    <a href=\"appointment.php\" style=\"color: white; text-decoration: none\">
+                                                                        Richiedi appuntamento
+                                                                    </a>
+                                                                  </button>");
+    } else {
+
+        $appointment->setContent("goTologin", "<button id=\"app_submit\" type=\"submit\" class=\"default_btn_ma\">
+                                                                    <a href=\"login.php\" style=\"color: white; text-decoration: none\">
+                                                                       Richiedi appuntamento
+                                                                    </a>
+                                                                  </button>");
+    }
+
+
+
     // sezione galleria: galleria.html
     $gallery = new Template("design/galleria.html");
 

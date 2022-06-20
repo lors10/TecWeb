@@ -411,11 +411,6 @@ function validateSignUpForm()
         document.getElementById('required_confirm_password').style.display = 'initial';
         return false;
     }
-
-    if (password_input.value != confirm_password_input.value) {
-        document.getElementById('required_password').style.display = 'initial';
-        document.getElementById('required_confirm_password').style.display = 'initial';
-    }
 }
 
 
