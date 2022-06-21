@@ -137,13 +137,8 @@
     } while ($data);
 
 
-
-
-
-
-
-
-
+    // sezione su di noi: su-di-noi.html
+    $about = new Template("design/su-di-noi.html");
 
 
 
@@ -267,14 +262,29 @@
     } while ($data);
 
 
+
+    $widget = new Template("design/widget.html");
+
+    $footer = new Template("design/footer.html");
+
+    //$contacts = new Template("design/contatti.html");
+
+
     $main->setContent("navbar", $navbar->get());
     //$main->setContent("carosello", $carosel->get());
     $main->setContent("carosello", $carosel->get());
+    $main->setContent("sudinoi", $about->get());
     $main->setContent("servizi", $services->get());
     $main->setContent("appuntamento", $appointment->get());
     $main->setContent("galleria", $gallery->get());
     $main->setContent("squadra", $team->get());
     $main->setContent("prezzi", $prices->get());
+    $main->setContent("widget", $widget->get());
+    $main->setContent("footer", $footer->get());
+
+    //$main->setContent("contatti", $contacts->get());
+
+
 
     //$main->setContent("loggedUser", $_SESSION['name']);
     $main->close();

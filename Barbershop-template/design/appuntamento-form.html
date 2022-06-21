@@ -1,0 +1,83 @@
+<section id="about" class="about_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5  d-none d-md-block">
+                <div class="about_img" style = "overflow:hidden">
+                    <img class="about_img_1" src="design/images/about-1.jpg" alt="about-1">
+                    <img class="about_img_2" src="design/images/about-2.jpg" alt="about-2">
+                    <img class="about_img_3" src="design/images/about-3.jpg" alt="about-3">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class=" card shadow mb-6">
+                    <div class="card-header py-3">
+
+                        <div class="alert alert-danger">
+                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <div class="messages">
+                                <div>Per favore riempi tutti i campi</div>
+                            </div>
+                        </div>
+
+                        <form class="validate-form" name="appointment-form" method="POST" action="" onsubmit="return validateAppointmentform()">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <!-- <label>Username</label> -->
+                                    <input type="text" placeholder="Username" name="username" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Seleziona il servizio desiderato</label>
+                                    <!--
+                                    <select name="services" class="form-control">
+                                        <option class="form-control" value="servizio 1" name="">Servizio 1</option>
+                                        <option class="form-control" value="servizio 2" name="">Servizio 2</option>
+                                    </select>
+                                    -->
+                                    <input type="text" name="service" class="form-control" list="servizi" oninput="getElementById('required_service').style.display='none'" autocomplete="off">
+                                    <datalist id="servizi">
+                                        <option class="form-control">Servizio 1</option>
+                                        <option class="form-control">Servizio 2</option>
+                                    </datalist>
+                                    <span class="invalid-feedback" id="required_service">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Seleziona la data</label>
+                                    <input type="date" name="date" class="form-control"  oninput="getElementById('required_date').style.display='none'" autocomplete="off">
+                                    <span class = "invalid-feedback" id="required_date">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Selezione l'orario</label>
+                                    <input type="time" name="time"  class="form-control" oninput="getElementById('required_time').style.display='none'" autocomplete="off">
+                                    <span class = "invalid-feedback" id="required_time">This field is required</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <button type="submit" name="add_new_service" class="btn default_btn">
+                                    <a href="#" style="color: white; text-decoration: none"> Richiedi Appuntamento</a>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INCLUDE JS SCRIPTS -->
+<script src="design/js/jquery.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="design/js/bootstrap.bundle.min.js"></script>
+<script src="design/js/sb-2.min.js"></script>
+<script src="design/js/main.js"></script>

@@ -413,6 +413,46 @@ function validateSignUpForm()
     }
 }
 
+/*
+	============================
+
+	VALIDATE APPOINTMENT FORM
+
+	============================
+*/
+
+function validateAppointmentform()
+{
+    var service_input = document.forms["appointment-form"]["service"].value;
+    var date_input = document.forms["appoinment-form"]["date"].value;
+    var time_input = document.forms["appointment-form"]["time"].value;
+
+
+    if (service_input == "" && date_input == "" && time_input == "")
+    {
+        document.getElementById('required_service').style.display = 'initial';
+        document.getElementById('required_date').style.display = 'initial';
+        document.getElementById('required_time').style.display = 'initial';
+        return false;
+    }
+
+    if (service_input == "")
+    {
+        document.getElementById('required_service').style.display = 'initial';
+        return false;
+    }
+    if(date_input == "")
+    {
+        document.getElementById('required_date').style.display = 'initial';
+        return false;
+    }
+    if(time_input == "")
+    {
+        document.getElementById('required_time').style.display = 'initial';
+        return false;
+    }
+}
+
 
 
 
