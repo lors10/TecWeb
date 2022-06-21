@@ -7,7 +7,6 @@
     error_reporting(0);
 
 
-
     // pagina principale: index.html
     $main = new Template("design/index.html");
 
@@ -80,40 +79,65 @@
     }
 
     // sezione carosello: carosello.html
-    $carosel = new Template("design/carosello.html");
-
-    // NON RIESCO A FARE LA QUERY PER ESTRAPOLARE TUTTE TRE LE IMAGES CHE POI DEVO PASSARE NELLA GRAFICA
-
-    // DEVO DISTINGUERE LE SLIDE IN BASE ALLA CLASSE active
 
     /*
+    $carosel = new Template("design/carosello.html");
 
-        $stmt = $connection->query("SELECT slider.idImmagine, slider.idPosition, slider.titolo, slider.testo,
-                                            immagini.idImmagine, immagini.path FROM slider
-                                            LEFT JOIN immagini
-                                            ON slider.idImmagine = immagini.idImmagine
-                                            WHERE immagini.idImmagine=4");
+    $stmt = $connection->query("SELECT slider.idImmagine, slider.idPosition, slider.titolo, slider.testo,
+                                    immagini.idImmagine, immagini.path
+                                    FROM slider
+                                    LEFT JOIN immagini
+                                    ON slider.idImmagine = immagini.idImmagine
+                                    WHERE slider.idPosition = 0");
 
-        if (!$stmt) {
+    if (!$stmt) {
 
-            // errore
+
+    }
+
+
+    $data = $stmt->fetch_assoc();
+
+    foreach ($data as $key => $value) {
+
+        $carosel->setContent($key, $value);
+    }
+
+   */
+
+    $carosel = new Template("design/carosello-prova.html");
+
+    $stmt = $connection->query("SELECT immagini.idImmagine, immagini.path,
+                                        slider.idImmagine, slider.idPosition, slider.titolo, slider.testo
+                                        FROM immagini
+                                        LEFT JOIN slider
+                                        ON immagini.idImmagine = slider.idImmagine
+                                        WHERE immagini.idImmagine = slider.idImmagine");
+
+    if (!$stmt) {
+
+        echo "errore";
+
+
+    }
+
+    $data = $stmt->fetch_assoc();
+
+
+    do {
+        $data = $stmt->fetch_assoc();
+
+        if ($data){
+            foreach ($data as $key => $value) {
+
+                $carosel->setContent($key, $value);
+            }
         }
 
-        $data = $stmt->num_rows;
+    } while ($data);
 
 
-         do {
 
-                $data = $stmt->fetch_assoc();
-                if ($data){
-                    foreach ($data as $key => $value) {
-                        echo "{$key} => {$value}";
-                        print_r($data);
-                    }
-                }
-            } while ($data);
-
-    */
 
 
 
@@ -244,6 +268,7 @@
 
 
     $main->setContent("navbar", $navbar->get());
+    //$main->setContent("carosello", $carosel->get());
     $main->setContent("carosello", $carosel->get());
     $main->setContent("servizi", $services->get());
     $main->setContent("appuntamento", $appointment->get());
