@@ -49,6 +49,14 @@
 
 
 
+    $stmt = $connection->query("SELECT * FROM appuntamento");
+
+    $data = $stmt->num_rows;
+
+    $main->setContent("appointmentCount", $data);
+
+
+
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
                                             utentiGruppi.idUtente, utentiGruppi.idGruppo
                                             FROM utenti

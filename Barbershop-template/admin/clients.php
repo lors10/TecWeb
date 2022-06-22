@@ -54,6 +54,13 @@
     $main->setContent("employeesCount", $employeesCount);
 
 
+    $stmt = $connection->query("SELECT * FROM appuntamento");
+
+    $data = $stmt->num_rows;
+
+    $main->setContent("appointmentCount", $data);
+
+
     $clients_page->setContent("clientsTable", $clients_table->get());
     $main->setContent("clients", $clients_page->get());
     $main->setContent("loggedUser", $_SESSION['name']);

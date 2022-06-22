@@ -14,10 +14,6 @@
     $idG = $_SESSION['idG'];
 
 
-    /*
-
-    */
-
     // sezione navbar: navbar.html
     $navbar = new Template("design/navbar.html");
 
