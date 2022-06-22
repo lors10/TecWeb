@@ -21,35 +21,45 @@
                             </div>
                         </div>
 
-                        <form class="validate-form" name="appointment-form" method="POST" action="" onsubmit="return validateAppointmentform()">
+                        <form class="validate-form" name="appointment-form" method="POST" action="appointment.php" onsubmit="return validateAppointmentform()">
+
+                            <div class="form-input">
+                                <input type="hidden" name="state" value="1">
+                            </div>
+
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <!-- <label>Username</label> -->
-                                    <input type="text" placeholder="Username" name="username" class="form-control" disabled>
+                                    <input type="text" placeholder="" value="<[nomeUser]>" name="username" class="form-control" disabled>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Seleziona il servizio desiderato</label>
-                                    <!--
-                                    <select name="services" class="form-control">
-                                        <option class="form-control" value="servizio 1" name="">Servizio 1</option>
-                                        <option class="form-control" value="servizio 2" name="">Servizio 2</option>
+
+                                    <select class="custom-select" name="service_name" class="form-control">
+                                        <[foreach]>
+                                        <option class="form-control" value="<[idAttivita]>" name="service_name"><[nomeAttivita]></option>
+                                        <[/foreach]>
                                     </select>
-                                    -->
-                                    <input type="text" name="service" class="form-control" list="servizi" oninput="getElementById('required_service').style.display='none'" autocomplete="off">
+
+                                    <!--
+                                    <input type="text" name="service_name" class="form-control" list="servizi" oninput="getElementById('required_service').style.display='none'" autocomplete="off" required>
                                     <datalist id="servizi">
-                                        <option class="form-control">Servizio 1</option>
-                                        <option class="form-control">Servizio 2</option>
+                                        <[foreach]>
+                                        <option class="form-control" name="service_name" value=""></option>
+                                        <[/foreach]>
                                     </datalist>
                                     <span class="invalid-feedback" id="required_service">This field is required</span>
+                                    -->
+
                                 </div>
                             </div>
 
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Seleziona la data</label>
-                                    <input type="date" name="date" class="form-control"  oninput="getElementById('required_date').style.display='none'" autocomplete="off">
+                                    <input type="date" min="09:00" max="18:00" step="" name="date" class="form-control"  oninput="getElementById('required_date').style.display='none'" autocomplete="off" required>
                                     <span class = "invalid-feedback" id="required_date">This field is required</span>
                                 </div>
                             </div>
@@ -57,14 +67,14 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Selezione l'orario</label>
-                                    <input type="time" name="time"  class="form-control" oninput="getElementById('required_time').style.display='none'" autocomplete="off">
+                                    <input type="time" name="time"  class="form-control" oninput="getElementById('required_time').style.display='none'" autocomplete="off" required>
                                     <span class = "invalid-feedback" id="required_time">This field is required</span>
                                 </div>
                             </div>
 
                             <div class="col-md-6">
-                                <button type="submit" name="add_new_service" class="btn default_btn">
-                                    <a href="#" style="color: white; text-decoration: none"> Richiedi Appuntamento</a>
+                                <button type="submit" name="add_appointment" class="btn default_btn">
+                                    Richiedi Appuntamento
                                 </button>
                             </div>
                         </form>

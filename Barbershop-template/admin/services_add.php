@@ -46,6 +46,8 @@
 
                 echo "Categoria aggiunta con successo!";
 
+                $query = "";
+
                 header("Location: services.php");
             } else {
 
