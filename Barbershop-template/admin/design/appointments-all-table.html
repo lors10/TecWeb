@@ -1,0 +1,44 @@
+<table class="table table-bordered tabcontent" id="All" width="100%" cellspacing="0">
+    <thead>
+    <tr>
+        <th>
+            Data inizio appuntamento
+        </th>
+        <th>
+            Servizio prenotato
+        </th>
+        <th>
+            Data fine appuntamento
+        </th>
+        <th>
+            Cliente
+        </th>
+        <th>
+            Azione
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    <[foreach]>
+    <tr>
+        <td><[inizioAppuntamento]></td>
+        <td><[nomeAttivita]></td>
+        <td></td>
+        <td><[idUtente]></td>
+        <td>
+            <ul class="list-inline m-0">
+                <!-- DELETE BUTTON -->
+                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                    <a href="#" style="color: white;">
+                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                            <i class="fa fa-trash"></i>
+                            Delete
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <[/foreach]>
+    </tbody>
+</table>
