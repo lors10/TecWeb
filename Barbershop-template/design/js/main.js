@@ -33,6 +33,36 @@ function phonenumber(inputtxt)
     }
 }
 
+/* ============ VALIDATE DATE ============== */
+
+function ValidateDate(inputdt)
+{
+    var dateno = /^[0-9]{4}\-[0-9]{2}\-[0-9]{2}$/;
+    if (inputdt.match(dateno))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/* ============ VALIDATE TIME ============== */
+
+function ValidateTime(inputtm)
+{
+    var timeno = /^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$/;
+    if (inputtm.match(timeno))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 /* ============ SEND CONTACT FORM ============== */
 
 
@@ -130,11 +160,11 @@ function showTab(n)
 
     if (n == (x.length - 1)) 
     {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("nextBtn").innerHTML = "Inserisci";
     }
     else 
     {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").innerHTML = "Prossimo";
     }
 
     fixStepIndicator(n);
@@ -180,6 +210,7 @@ function validateForm()
         }
     }
 
+    /*
     if(id_tab == "employees_tab")
     {
         if(x[currentTab].querySelectorAll('input[type="radio"]:checked').length == 0)
@@ -226,10 +257,12 @@ function validateForm()
 
         }
     }
+    */
 
     if(id_tab == "calendar_tab")
     {
-        if(x[currentTab].querySelectorAll('input[type="radio"]:checked').length == 0)
+        /*
+        if(x[currentTab].querySelectorAll('input[type="date"]:checked').length = 0)
         {
             x[currentTab].getElementsByClassName("alert")[0].style.display = "block";
             valid = false;
@@ -237,7 +270,67 @@ function validateForm()
         else
         {
             x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
+
+
+            if (x[currentTab].querySelectorAll('input[type="time"]:checked').length = 0)
+            {
+                x[currentTab].getElementsByClassName("alert")[0].style.display = "block";
+                valid =  false;
+            }
+            else
+            {
+                x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
+            }
         }
+
+
+        if(!ValidateEmail(client_email))
+                {
+                    $('#client_email').css("border", "2px solid #dc3545");
+                    $("#client_email ~ span").css("display", "block");
+                    valid = false;
+                }
+                else
+                {
+                    $('#client_email').css("border", "0px");
+                    $("#client_email ~ span").css("display", "none");
+
+        */
+
+        var calendar_date = $('#selected_date').val();
+        var calendar_time = $('#selected_time').val();
+
+        if (!ValidateDate(calendar_date))
+        {
+
+            //$('#calendar_date').css("border", "2px solid #dc3545");
+            //$("#calendar_date ~ span").css("display", "block");
+            //console.log("sono falso");
+            x[currentTab].getElementsByClassName("alert")[0].style.display = "block";
+            valid = false;
+
+
+        }
+        else
+        {
+            //$('#calendar_date').css("border", "0px");
+            //$("#calendar_date ~ span").css("display", "none");
+            x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
+
+
+            if (!ValidateTime(calendar_time))
+            {
+                x[currentTab].getElementsByClassName("alert")[0].style.display = "block";
+                valid = false;
+            }
+            else
+            {
+                x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
+            }
+
+        }
+
+
     }
 
     if(id_tab == "client_tab")

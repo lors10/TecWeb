@@ -1,0 +1,174 @@
+<!-- PHP INCLUDES -->
+
+
+<!-- Appointment Page Stylesheet -->
+<link rel="stylesheet" href="design/css/appointment-page-style.css">
+
+
+<!-- BOOKING APPOINTMENT SECTION -->
+
+<section class="booking_section">
+    <div class="container">
+
+        <div class = 'alert alert-success'>
+            <p>Alert Success</p>
+        </div>
+
+        <div class = 'alert alert-danger'>
+            <p>Alert Error</p>
+        </div>
+
+
+        <!-- RESERVATION FORM -->
+
+        <form method="post" id="appointment_form" action="appointment.php">
+
+            <div class="form-input">
+                <input type="hidden" name="state" value="1">
+            </div>
+
+            <!-- SELECT SERVICE -->
+
+            <div class="select_services_div tab_reservation" id="services_tab">
+
+                <!-- ALERT MESSAGE -->
+
+                <div class="alert alert-danger" role="alert" style="display: none">
+                    Per favore, selezionare almeno un sevizio!
+                </div>
+
+                <div class="text_header">
+					<span>
+						1. Seleziona un servizio
+					</span>
+                </div>
+
+                <!-- SERVICES TAB -->
+
+                <div class="items_tab">
+                    <[foreach]>
+                    <div class='itemListElement'>
+                        <div class="item_select_part">
+                            <div style="margin-right: 10px"><[nomeAttivita]></div>
+                            <!--
+                            <div class='item_select_part'>
+                                <span class='service_duration_field'></span>
+                            </div>
+                            -->
+                            <div>
+                                <span style='font-weight: bold; margin-left: 350px'><[prezzoAttivita]> €</span>
+                            </div>
+                            <div>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    <label class="service_label item_label btn btn-secondary">
+                                        <input type="checkbox"  name="selected_services[]" value="<[idAttivita]>" autocomplete="off">Seleziona
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <[/foreach]>
+                </div>
+
+            </div>
+
+
+
+
+                <!-- SELECT DATE TIME -->
+
+            <div class="select_date_time_div tab_reservation" id="calendar_tab">
+
+                <!-- ALERT MESSAGE -->
+
+                <div class="alert alert-danger" role="alert" style="display: none">
+                    Per favore seleziona giorno e ora dell'appuntamento!
+                </div>
+
+                <div class="text_header">
+                    <span>
+						2. Seleziona giorno e ora dell'appuntamento
+					</span>
+                </div>
+
+                <div class="calendar_tab" style="overflow-x: auto;overflow-y: visible;" id="calendar_tab_in">
+                    <!--
+                    <div id="calendar_loading">
+                        <img src="Design/images/ajax_loader_gif.gif" style="display: block;margin-left: auto;margin-right: auto;">
+                    </div>
+                    -->
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Seleziona la data</label>
+                            <input type="date" name="selected_date" id="selected_date" class="form-control" autocomplete="off">
+                            <span class = "invalid-feedback">Questo campo è richiesto</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Selezione l'orario</label>
+                            <input type="time" name="selected_time" id="selected_time"  class="form-control" autocomplete="off">
+                            <span class = "invalid-feedback">Questo campo è richiesto</span>
+                        </div>
+                    </div>
+               </div>
+
+            </div>
+
+
+            <!-- CLIENT DETAILS -->
+
+            <div class="client_details_div tab_reservation" id="client_tab">
+
+                <div class="text_header">
+                    <span>
+                        4. Dettagli del cliente
+                    </span>
+                </div>
+
+                <div>
+                    <div class="form-group colum-row row">
+                        <div class="col-sm-6">
+                            <label>Nome Cliente</label>
+                            <input type="text" name="client_first_name" id="client_first_name" class="form-control" value="<[nomeUtente]>" disabled>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>Cognome Cliente</label>
+                            <input type="text" name="client_last_name" id="client_last_name" class="form-control" value="<[cognomeUtente]>" disabled>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>E-mail Cliente</label>
+                            <input type="email" name="client_email" id="client_email" class="form-control"  value="<[emailUtente]>" disabled>
+                        </div>
+                        <div class="col-sm-6">
+                            <label>N. Cellulare Cliente</label>
+                            <input type="text"  name="client_phone_number" id="client_phone_number" class="form-control" value="<[cellulareUtente]>" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!-- NEXT AND PREVIOUS BUTTONS -->
+
+            <div style="overflow:auto;padding: 30px 0px;">
+                <div style="float:right;">
+                    <input type="hidden" name="submit_book_appointment_form">
+                    <button type="button" id="prevBtn"  class="next_prev_buttons" style="background-color: #bbbbbb;"  onclick="nextPrev(-1)">Indietro</button>
+                    <button type="button" id="nextBtn" class="next_prev_buttons" onclick="nextPrev(1)">Avanti</button>
+                </div>
+            </div>
+
+            <!-- Circles which indicates the steps of the form: -->
+
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+        </form>
+    </div>
+</section>
