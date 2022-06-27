@@ -10,6 +10,7 @@
 <section class="booking_section">
     <div class="container">
 
+        <!--
         <div class = 'alert alert-success'>
             <p>Alert Success</p>
         </div>
@@ -17,6 +18,11 @@
         <div class = 'alert alert-danger'>
             <p>Alert Error</p>
         </div>
+        -->
+
+        <[successAlert]>
+
+        <[errorAlert]>
 
 
         <!-- RESERVATION FORM -->
@@ -61,7 +67,7 @@
                             <div>
                                 <div class="btn-group-toggle" data-toggle="buttons">
                                     <label class="service_label item_label btn btn-secondary">
-                                        <input type="checkbox"  name="selected_services[]" value="<[idAttivita]>" autocomplete="off">Seleziona
+                                        <input type="checkbox" name="service_name" value="<[idAttivita]>" autocomplete="off">Seleziona
                                     </label>
                                 </div>
                             </div>
@@ -81,8 +87,12 @@
 
                 <!-- ALERT MESSAGE -->
 
-                <div class="alert alert-danger" role="alert" style="display: none">
-                    Per favore seleziona giorno e ora dell'appuntamento!
+                <div class="alert alert-danger" role="alert"  id="alert_date" style="display: none">
+                    Per favore seleziona il giorno!
+                </div>
+
+                <div class="alert alert-danger" role="alert"  id="alert_time" style="display: none">
+                    Per favore seleziona la fascia di orario!
                 </div>
 
                 <div class="text_header">
@@ -101,15 +111,55 @@
                         <div class="form-group">
                             <label>Seleziona la data</label>
                             <input type="date" name="selected_date" id="selected_date" class="form-control" autocomplete="off">
-                            <span class = "invalid-feedback">Questo campo è richiesto</span>
+                            <!-- <span class = "invalid-feedback">Questo campo è richiesto</span> -->
                         </div>
                     </div>
 
                     <div class="col-md-12">
                         <div class="form-group">
                             <label>Selezione l'orario</label>
+                            <!--
                             <input type="time" name="selected_time" id="selected_time"  class="form-control" autocomplete="off">
                             <span class = "invalid-feedback">Questo campo è richiesto</span>
+                            -->
+
+                            <!--checked-->
+                            <!--disabled-->
+
+                        </div>
+                        <div class="" data-toggle="buttons" style="margin-left: 20px">
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="9:00:00" style="margin-bottom: 5px">09:00 - 10:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="10:00:00" style="margin-bottom: 5px">10:00 - 11:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="11:00:00" style="margin-bottom: 5px">11:00 - 12:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="12:00:00" style="margin-bottom: 5px">12:00 - 13:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="14:00:00" style="margin-bottom: 5px">02:00 - 03:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="15:00:00" style="margin-bottom: 5px">03:00 - 04:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="16:00:00" style="margin-bottom: 5px">04:00 - 05:00 AM
+                                </label>
+
+                                <label class="default_btn_slot service_label item_label_slot btn btn-secondary">
+                                    <input type="radio" name="selected_time_slot" value="17:00:00" style="margin-bottom: 5px">05:00 - 06:00 AM
+                                </label>
                         </div>
                     </div>
                </div>

@@ -318,6 +318,7 @@ function validateForm()
             x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
 
 
+            /*
             if (!ValidateTime(calendar_time))
             {
                 x[currentTab].getElementsByClassName("alert")[0].style.display = "block";
@@ -327,11 +328,24 @@ function validateForm()
             {
                 x[currentTab].getElementsByClassName("alert")[0].style.display = "none";
             }
+            */
+
+            if(x[currentTab].querySelectorAll('input[type="radio"]:checked').length == 0)
+            {
+                document.getElementById("alert_time").style.display = "block";
+                valid = false;
+            }
+            else
+            {
+                document.getElementById("alert_time").style.display = "none";
+            }
 
         }
 
 
     }
+
+    /*
 
     if(id_tab == "client_tab")
     {
@@ -388,6 +402,7 @@ function validateForm()
             }
         }
     }
+    */
 
     if (valid) 
     {

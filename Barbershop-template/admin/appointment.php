@@ -8,7 +8,7 @@
     $appointment = new Template("design/appointments.html");
     $next_appointment_table = new Template("design/appointments-next-table.html");
 
-    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioAppuntamento, appuntamento.idUtente,
+    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, appuntamento.inizioTempoAppuntamento, appuntamento.idUtente,
                                                  prenotazione.idAppuntamento, prenotazione.idAttivita,
                                                  attivita.idAttivita, attivita.nomeAttivita
                                                  FROM appuntamento
@@ -16,7 +16,7 @@
                                                  ON appuntamento.idAppuntamento = prenotazione.idAppuntamento
                                                  INNER JOIN attivita
                                                  ON prenotazione.idAttivita = attivita.idAttivita
-                                                 WHERE appuntamento.inizioAppuntamento >= current_date");
+                                                 WHERE appuntamento.inizioDataAppuntamento >= current_date");
 
     if (!$stmt) {
 
@@ -40,7 +40,7 @@
     // - utente
     // - servizio (attivita)
 
-    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioAppuntamento, appuntamento.idUtente,
+    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, appuntamento.inizioTempoAppuntamento, appuntamento.idUtente,
                                              prenotazione.idAppuntamento, prenotazione.idAttivita,
                                              attivita.idAttivita, attivita.nomeAttivita
                                              FROM appuntamento

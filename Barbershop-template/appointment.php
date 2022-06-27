@@ -54,16 +54,54 @@
                 }
             }
 
-            echo "sono qui 0";
-
-
 
             break;
 
         case 1:
 
             // compilazione ed invio form
-            echo "sono qui";
+
+            $query = "INSERT into appuntamento (idAppuntamento, idUtente, inizioDataAppuntamento, inizioTempoAppuntamento, cancellazione, createdAt)
+                            VALUES (NULL, {$_SESSION['id']}, '{$_REQUEST['selected_date']}',  '{$_REQUEST['selected_time_slot']}', 0, '" . date('Y-m-d H:i:s') . "')";
+
+            if ($connection->query($query) == 1) {
+
+                $stmt = "SELECT * FROM appuntamento WHERE idUtente = {$_SESSION['id']}";
+
+                $result = $connection->query($stmt);
+
+                while ($row = $result->fetch_assoc()) {
+
+                    //echo $row['idUtente'] . "\n" . $row['nomeUtente'] . "\n" . $row['cognomeUtente'] . "\n" . $row['cellulareUtente'] . "\n" . $row['password'];
+
+                    $stmt = $connection->query("INSERT into prenotazione (idAppuntamento, idAttivita) VALUES ({$row['idAppuntamento']},{$_REQUEST['service_name']})");
+
+                    if (!$stmt) {
+
+                        echo "Errore: " . $query . '<br />' . $connection->connect_error;
+
+                    }
+                }
+
+                $appointment->setContent("successAlert", "<div class=\"alert alert-success\">
+                                                                            <p>Prenotazione avvenuta con successo</p>
+                                                                        </div>");
+
+                header("Location: index.php");
+
+            } else {
+
+                // check errore
+                //echo "Errore: " . $query . '<br />' . $connection->connect_error;
+                $appointment->setContent("errorAlert", "<div class=\"alert alert-danger\">
+                                                                            <p>Prenotazione non avvenuta</p>
+                                                                        </div>");
+
+                header("Location: appointment.php");
+            }
+
+
+            //header("Location: index.php");
 
             break;
 
