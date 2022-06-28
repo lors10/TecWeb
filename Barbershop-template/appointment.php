@@ -24,6 +24,7 @@
 
         case 0:
 
+
             // emissione form
 
             // estrapolo informzioni su servizi forniti
@@ -53,6 +54,43 @@
                     $appointment->setContent($key, $value);
                 }
             }
+
+            /*
+            // faccio la query e la inserisco in un array associativo
+
+            // estrapolo dal db il conteggio dello stesso giorno in cui viene prenotato lo stesso slot di tempo da persone diverse
+            $result = $connection->query("SELECT inizioDataAppuntamento, COUNT(*) 
+                                                    FROM appuntamento 
+                                                    WHERE inizioTempoAppuntamento = '17:00:00' 
+                                                    GROUP BY inizioDataAppuntamento");
+
+
+            while ($data = $result->fetch_all(MYSQLI_ASSOC)) {
+
+                foreach ($data as $row) {
+
+                    //echo $row['COUNT(*)'] . "<br>";
+
+                    if (($row['COUNT(*)'] >= 2) && ($_REQUEST['selected_date'])) {
+
+                        //echo "caso falso";
+                        //echo "<br>";
+                        $appointment->setContent("label", "<label class=\"btn btn-secondary\" disabled=\"true\">
+                                                                                <input type=\"radio\" name=\"selected_time_slot\" value=\"17:00:00\" style=\"margin-bottom: 5px\">05:00 - 06:00 AM
+                                                                           </label>");
+
+                    } else {
+
+                        //echo "caso vero";
+                        //echo "<br>";
+                        $appointment->setContent("label", "<label class=\"default_btn_slot service_label item_label_slot btn btn-secondary\">
+                                                                            <input type=\"radio\" name=\"selected_time_slot\" value=\"17:00:00\" style=\"margin-bottom: 5px\">05:00 - 06:00 AM
+                                                                          </label>");
+
+                    }
+                }
+            }
+            */
 
 
             break;
