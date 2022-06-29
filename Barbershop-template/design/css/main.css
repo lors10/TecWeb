@@ -346,8 +346,9 @@ h3{
 
 .default_btn_ma
 {
+    /*
     padding-top: 10px;
-    font-family: Work Sans, sans-serif;
+    font-family: "Work Sans", sans-serif;
     background-color: #9e8a78;
     color: #fff;
     line-height: 45px;
@@ -359,13 +360,34 @@ h3{
     position: absolute;
     margin-left: 172px;
     margin-right: 172px
+    */
+    font-family: "Work Sans",sans-serif;
+    letter-spacing: 0;
+    background-color: #9e8a78;
+    color: #fff;
+    line-height: 45px;
+    display: inline-block;
+    padding: 0 25px;
+    border-radius: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.default_btn:hover .default_slot:hover
+.default_btn:hover .default_slot:hover .default_btn_ma
 {
     color: #fff;
 }
-.default_btn:hover:before .default_slot:hover:before
+.default_btn:hover:before .default_slot:hover:before .default_btn_ma:hover:before
 {
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -378,7 +400,7 @@ h3{
     transform: scale(1, 1);
 }
 
-.default_btn:before 
+.default_btn:before .default_btn_ma:before
 {
     content: "";
     position: absolute;
@@ -569,7 +591,7 @@ h3{
 .pricing_section .price_wrap .price_list li h4:after 
 {
     color: #bbb;
-    content: "--------------------" "--------------------" "--------------------" "--------------------";
+    /*content: "--------------------" "--------------------" "--------------------" "--------------------";*/
     font-weight: normal;
     margin-left: 10px;
     position: absolute;
@@ -587,7 +609,7 @@ h3{
 .pricing_section .price_wrap .price_list li span.price 
 {
     font-family: "Prata",sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     color: #9e8a78;
     font-weight: 700;
     position: absolute;
