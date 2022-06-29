@@ -43,7 +43,7 @@
                                                 FROM utenti
                                                 LEFT JOIN utentiGruppi
                                                 ON utenti.idUtente = utentiGruppi.idUtente
-                                                WHERE utentiGruppi.idGruppo = 2");
+                                                /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $clientsCount = $stmt->num_rows;
 

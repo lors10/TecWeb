@@ -37,6 +37,7 @@
 
     */
 
+    // query per estrapolare tutte le immagini e metterle nella tabella apposita
     $stmt = $connection->query("SELECT * FROM immagini");
 
     if (!$stmt) {
@@ -56,7 +57,7 @@
 
 
 
-
+    // query per estrapolare le immagine della sezione slider e inserirle nella tabella apposita
     $stmt = $connection->query("SELECT * FROM slider");
 
     if (!$stmt) {
@@ -76,6 +77,7 @@
 
 
 
+    // query per estrarre immagini da mettere nella sezione galleria
     $stmt = $connection->query("SELECT galleria.idImmagine, immagini.idImmagine, immagini.alt 
                                             FROM galleria
                                             LEFT JOIN immagini
@@ -97,7 +99,7 @@
     } while ($data);
 
 
-
+    // query per estrarre informazioni dei dipendenti ed associarli alla tabella apposita insieme alla info delle immagini
     $stmt = $connection->query("SELECT * FROM dipendenti");
 
     if (!$stmt) {
@@ -146,7 +148,7 @@
                                             FROM utenti
                                             LEFT JOIN utentiGruppi
                                             ON utenti.idUtente = utentiGruppi.idUtente
-                                            WHERE utentiGruppi.idGruppo = 2");
+                                            /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $employeesCount = $stmt->num_rows;
 

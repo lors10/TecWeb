@@ -8,6 +8,8 @@
     $appointment = new Template("design/appointments.html");
     $next_appointment_table = new Template("design/appointments-next-table.html");
 
+
+    // query per estrarre info su prossimi appuntamenti e inserirli nella tabella apposita
     $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, appuntamento.inizioTempoAppuntamento, appuntamento.idUtente,
                                                  prenotazione.idAppuntamento, prenotazione.idAttivita,
                                                  attivita.idAttivita, attivita.nomeAttivita
@@ -39,6 +41,7 @@
     // - appuntamento
     // - utente
     // - servizio (attivita)
+    // query che permette di vedere tutti gli appuntamenti
 
     $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, appuntamento.inizioTempoAppuntamento, appuntamento.idUtente,
                                              prenotazione.idAppuntamento, prenotazione.idAttivita,
@@ -69,6 +72,7 @@
 
     $cancelled_appointment_table = new Template("design/appointments-cancelled-table.html");
 
+    // query per vedere tutti gli appuntamenti annullati
     $stmt = $connection->query("SELECT * FROM attivita");
 
     $serviceCount = $stmt->num_rows;
@@ -97,7 +101,7 @@
                                                 FROM utenti
                                                 LEFT JOIN utentiGruppi
                                                 ON utenti.idUtente = utentiGruppi.idUtente
-                                                WHERE utentiGruppi.idGruppo = 2");
+                                                /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $clientsCount = $stmt->num_rows;
 

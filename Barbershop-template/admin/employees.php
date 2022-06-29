@@ -9,6 +9,7 @@
     $clients_page = new Template("design/employees.html");
     $employe_table = new Template("design/employees-table.html");
 
+    // query per estrarre dipendenti ed inserirli nella tabella apposita
     $stmt = $connection->query("SELECT * FROM dipendenti");
 
     if (!$stmt) {
@@ -54,7 +55,7 @@
                                                 FROM utenti
                                                 LEFT JOIN utentiGruppi
                                                 ON utenti.idUtente = utentiGruppi.idUtente
-                                                WHERE utentiGruppi.idGruppo = 2");
+                                                /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $clientsCount = $stmt->num_rows;
 

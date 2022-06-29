@@ -9,6 +9,8 @@
     $services_page = new Template("design/services.html");
     $services_table = new Template("design/service-table.html");
 
+
+    // query per selezionare servizi offerti e passarli alla tabella grafica
     $stmt = $connection->query("SELECT attivita.idAttivita, attivita.idCategoria, attivita.nomeAttivita, 
                                                 attivita.descrizioneAttivita, attivita.prezzoAttivita, 
                                                 categoriaAttivita.idCategoria, categoriaAttivita.nomeCategoria
@@ -62,7 +64,7 @@
                                             FROM utenti
                                             LEFT JOIN utentiGruppi
                                             ON utenti.idUtente = utentiGruppi.idUtente
-                                            WHERE utentiGruppi.idGruppo = 2");
+                                            /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $clientsCount = $stmt->num_rows;
 
