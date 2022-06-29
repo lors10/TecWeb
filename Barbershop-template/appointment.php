@@ -4,6 +4,7 @@
     require ("include/dbms.inc.php");
     require ("include/session-start.php");
 
+
     error_reporting(0);
 
 

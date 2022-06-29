@@ -22,6 +22,8 @@
 
         case 1:
 
+            // controllo su password
+
             if ($_REQUEST['password'] != $_REQUEST['confirm_password']) {
 
                 $singup->setContent("message", "<div class=\"alert alert-danger\">
@@ -35,6 +37,7 @@
             }
 
 
+            // query di inserimento utente nel db
 
             $stmt = $connection->query("INSERT into utenti (idUtente, nomeUtente, cognomeUtente, cellulareUtente, username, password, emailUtente)
                             VALUES (NULL, '{$_REQUEST['name']}', '{$_REQUEST['surname']}', '{$_REQUEST['number']}', '{$_REQUEST['username']}', '{$_REQUEST['password']}', '{$_REQUEST['mail']}')");
@@ -44,6 +47,7 @@
                 // errore
             }
 
+            // procedura per estrapolare informazioni da utente appena inserito e inserire info nella tabella utentiGruppi (per possibili controlli)
 
             $sql = "SELECT idUtente, nomeUtente, cognomeUtente, cellulareUtente, password FROM utenti WHERE username= '{$_REQUEST['username']}'";
 

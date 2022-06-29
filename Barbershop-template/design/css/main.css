@@ -316,11 +316,11 @@ h3{
     color: #fff;
     border-radius: 0;
 }
-.appointment_form .default_btn .default_btn_slot
+.appointment_form .default_btn .default_slot
 {
     margin-top: 15px;
 }
-.default_btn .default_btn_slot
+.default_btn .default_slot
 {
     font-family: "Work Sans",sans-serif;
     letter-spacing: 0;
@@ -361,11 +361,11 @@ h3{
     margin-right: 172px
 }
 
-.default_btn:hover .default_btn_slot:hover
+.default_btn:hover .default_slot:hover
 {
     color: #fff;
 }
-.default_btn:hover:before .default_btn_slot:hover:before
+.default_btn:hover:before .default_slot:hover:before
 {
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
@@ -404,7 +404,7 @@ h3{
     z-index: -1;
 }
 
-.default_btn_slot:before
+.default_slot:before
 {
     content: "";
     position: absolute;

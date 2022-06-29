@@ -4,6 +4,7 @@
     require ("include/dbms.inc.php");
     require ("include/session-start.php");
 
+
     error_reporting(0);
 
 
@@ -30,17 +31,21 @@
         $navbar->setContent($key, $value);
     }
 
+    // controllo se l'utente (generico) è loggato o meno
     if ( $log != 0 ) {
-
+        // controllo che tipo di utente è loggato (user o admin) in base all'id del gruppo
         if ($idG == 1) {
 
             $navbar->setContent("loggedUser", $_SESSION['name']);
+
 
             /*
             $navbar->setContent("logoutButton", "<div class=\"header-btn\">
                                                                 <a href=\"logout.php\" class=\"menu-btn\">Logout</a>
                                                             </div>");
             */
+
+
             $navbar->setContent("logoutButton_a", "<li class=\"\">
                                                                 <a class=\"nav-link\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                                                                     <span></span>
@@ -61,6 +66,20 @@
                                                                         </a>
                                                                 </div>
                                                             </li>");
+
+            $navbar->setContent("logoutButton_a_m", "<li class=\"\">
+                                                                
+                                                                    <!-- Dropdown - User Information -->
+                                                                    
+                                                                    <a class=\"a-mob-menu\" href=\"admin/index.php\">
+                                                                       Dashboard Admin
+                                                                    </a>
+                                                                    <div class=\"dropdown-divider\"></div>
+                                                                    <a class=\"a-mob-menu\" href=\"logout.php\">
+                                                                       <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>
+                                                                            Logout
+                                                                    </a>
+                                                                </li>");
         } else {
 
             $navbar->setContent("logoutButton_u", "<div class=\"header-btn\">
@@ -119,7 +138,6 @@
 
     $data = $stmt->fetch_assoc();
 
-
     do {
         $data = $stmt->fetch_assoc();
 
@@ -161,6 +179,7 @@
     // sezione appuntamento: appuntamento.html
     $appointment = new Template("design/appuntamento.html");
 
+    // controllo se l'utente è loggato e quindi può andare alla sezione appuntamento, altrimenti deve fare il login
     if ($log != 0) {
 
         $appointment->setContent("goToappointemnt", "<button id=\"app_submit\" type=\"submit\" class=\"default_btn_ma\">
@@ -176,7 +195,6 @@
                                                                     </a>
                                                                   </button>");
     }
-
 
 
     // sezione galleria: galleria.html
@@ -258,16 +276,18 @@
     } while ($data);
 
 
-
+    // sezione widget: pagina widget.html
     $widget = new Template("design/widget.html");
 
+
+    // sezione footer: pagina footer.html
     $footer = new Template("design/footer.html");
+
 
     //$contacts = new Template("design/contatti.html");
 
 
     $main->setContent("navbar", $navbar->get());
-    //$main->setContent("carosello", $carosel->get());
     $main->setContent("carosello", $carosel->get());
     $main->setContent("sudinoi", $about->get());
     $main->setContent("servizi", $services->get());
@@ -277,11 +297,7 @@
     $main->setContent("prezzi", $prices->get());
     $main->setContent("widget", $widget->get());
     $main->setContent("footer", $footer->get());
-
     //$main->setContent("contatti", $contacts->get());
-
-
-
     //$main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
 
