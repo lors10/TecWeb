@@ -1,0 +1,43 @@
+<!-- Edit Service Category -->
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modifica una Categoria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><a style="color: #2d2e33; text-decoration: none" href="service_category.php"> &times;</a></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="service_category_edit.php">
+
+                        <!-- VALUE INPUT -->
+                        <div class="form-group">
+                            <input type="hidden" name="state" value="1">
+                        </div>
+
+                        <!-- CATEGORY ID-->
+                        <div class="form-group">
+                            <input type="hidden" name="category_id" class="form-control" placeholder="Id Categoria" value="<[idCategoria]>">
+                        </div>
+
+                        <!-- CATEGORY INPUT-->
+                        <div class="form-group">
+                            <label> Nome Categoria</label>
+                            <input type="text" name="category_name_update" class="form-control" placeholder="Nome Categoria" value="<[nomeCategoria]>" required>
+                        </div>
+
+                        <!-- CATEGORY DESCRIPTION INPUT -->
+                        <div class="form-group">
+                            <label>Descrizione Categoria</label>
+                            <input type="text" name="category_description_update" class="form-control" placeholder="Descrizione Categoria" value="<[descrizioneCategoria]>" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><a style="color: white; text-decoration: none" href="service_category.php">Indietro</a></button>
+                        <button type="submit" class="btn btn-secondary">Modifica Categoria</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
