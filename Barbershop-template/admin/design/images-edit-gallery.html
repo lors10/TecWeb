@@ -1,0 +1,35 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifica Immagine in Galleria</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="images_gallery_edit.php">
+            <div class="row">
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+                <!-- ID INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="image_id" value="<[idImmagine]>">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Immagine Galleria</label>
+                        <input type="text" name="gallery_id" value="<[idImmagine]>" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Descrizione Immagine Galleria</label>
+                        <input type="text" name="gallery_description" value="<[alt]>">
+                    </div>
+                </div>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="edit_slide_gallery" class="btn btn-primary">Modifica Immagine</button>
+        </form>
+    </div>
+</div>

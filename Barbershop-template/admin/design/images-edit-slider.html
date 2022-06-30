@@ -1,0 +1,47 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifica una Slide</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="images_slider_edit.php">
+            <div class="row">
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+                <!-- ID INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="image_id" value="<[idImmagine]>">
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Slider</label>
+                        <input type="text" class="form-control" value="<[idImmagine]>" name="slider_id" disabled>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id posizione Slider</label>
+                        <input type="text" class="form-control" value="<[idPosition]>" name="slider_position_update">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Titolo Slider</label>
+                        <input type="text" class="form-control" value="<[titolo]>" name="slider_title_update">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Testo Slider</label>
+                        <input type="text" class="form-control" value="<[testo]>" name="slider_body_update">
+                    </div>
+                </div>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="edit_new_service" class="btn btn-primary">Modifica Slide</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Modifica Immagine</h6>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="images_edit.php">
+            <div class="row">
+
+                <!-- VALUE INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="state" value="1">
+                </div>
+
+                <!-- ID INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="image_id" value="<[idImmagine]>">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Percorso Immagine</label>
+                        <input type="text" class="form-control" value="<[path]>" name="image_path_update">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Descrizione Immagine</label>
+                        <input type="text" class="form-control" value="<[alt]>" name="image_alt_update">
+                    </div>
+                </div>
+            </div>
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" name="add_new_service" class="btn btn-primary">Modifica Immagine</button>
+        </form>
+
+    </div>
+</div>
