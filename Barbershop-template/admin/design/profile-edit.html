@@ -1,8 +1,8 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Profilo Amministratore</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Modifica Profilo Amministratore</h6>
     </div>
-    <form method="POST" action="#">
+    <form method="POST" action="profile_edit.php">
         <div class="card-body">
             <div class=" card shadow mb-4">
                 <div class="card-header py-3">
@@ -10,24 +10,39 @@
                 </div>
 
                 <div class="card-header py-3">
+
+                    <!-- INPUT VALUE -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" name="state" value="1">
+                        </div>
+                    </div>
+
+                    <!-- ID VALUE -->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="hidden" class="form-control" name="admin_id" value="<[idUtente]>">
+                        </div>
+                    </div>
+
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Nome </label>
-                            <input type="text" class="form-control" value="<[nomeUtente]>" name="admin_name" disabled>
+                            <input type="text" class="form-control" value="<[nomeUtente]>" name="admin_name_update">
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Cognome </label>
-                            <input type="text" class="form-control" value="<[cognomeUtente]>" name="admin_surname" disabled>
+                            <input type="text" class="form-control" value="<[cognomeUtente]>" name="admin_surname_update">
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Numero </label>
-                            <input type="text" class="form-control" value="<[cellulareUtente]>" name="admin_number" disabled>
+                            <input type="text" class="form-control" value="<[cellulareUtente]>" name="admin_number_update">
                         </div>
                     </div>
                 </div>
@@ -42,26 +57,22 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Username </label>
-                            <input type="text" class="form-control" value="<[username]>" name="admin_username" disabled>
+                            <input type="text" class="form-control" value="<[username]>" name="admin_username_update">
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Password </label>
-                            <input type="password" class="form-control" value="<[password]>" name="admin_password" disabled>
+                            <input type="text" class="form-control" value="<[password]>" name="admin_password_update">
                         </div>
                     </div>
 
                 </div>
             </div>
-            <!-- EDIT & GO BACK BUTTON -->
-            <button type="submit" class="btn btn-secondary">
-                <a href="index.php" style="color: white; text-decoration: none"> Indietro</a>
-            </button>
-
-            <button type="submit" name="edit_new_service" class="btn btn-primary">
-                <a href="profile_edit.php" style="color: white; text-decoration: none"> Modifica Account</a>
+            <!-- EDIT BUTTON -->
+            <button type="submit" name="add_new_service" class="btn btn-primary">
+                <a style="color: white; text-decoration: none"> Conferma Account</a>
             </button>
         </div>
     </form>

@@ -43,7 +43,7 @@ require("../include/session-start.php");
 
             // modificare i dati della tabella
             // notifica
-            // tornare alla home immagini
+            // tornare alla home dipendenti
 
             $stmt = $connection->query("UPDATE dipendenti SET 
                                                         nomeDipendente = \"{$_REQUEST['employer_name_update']}\",
@@ -67,8 +67,6 @@ require("../include/session-start.php");
 
             break;
 
-
-            break;
     }
 
 
