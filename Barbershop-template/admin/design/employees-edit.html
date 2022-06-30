@@ -1,9 +1,9 @@
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Aggiungi un nuovo Dipendente</h6>
+        <h6 class="m-0 font-weight-bold text-primary">Modifica Dipendente</h6>
     </div>
     <div class="card-body">
-        <form method="POST" action="employees_add.php">
+        <form method="POST" action="employees_edit.php">
             <div class="row">
 
                 <!-- VALUE INPUT -->
@@ -11,44 +11,45 @@
                     <input type="hidden" name="state" value="1">
                 </div>
 
+                <!-- ID INPUT -->
+                <div class="form-group">
+                    <input type="hidden" name="employer_id" value="<[idDipendente]>">
+                </div>
+
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Nome </label>
-                        <input type="text" class="form-control" value="" placeholder="Nome Dipendente" name="employer_name" required>
+                        <input type="text" class="form-control" value="<[nomeDipendente]>" name="employer_name_update">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Cognome </label>
-                        <input type="text" class="form-control" value="" placeholder="Cognome Dipendente" name="employer_surname" required>
+                        <input type="text" class="form-control" value="<[cognomeDipendente]>" name="employer_surname_update">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Id Immagine </label>
-                        <select class="custom-select" name="employer_image_id">
-                            <[foreach]>
-                            <option value="<[idImmagine]>" name="employer_image_id"><[idImmagine]> - <[alt]></option>
-                            <[/foreach]>
-                        </select>
+                        <input type="text" class="form-control" value="<[idImmagine]>" name="image_id" disabled>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>N. Cellulare </label>
-                        <input type="text" class="form-control" value="" placeholder="Cellulare Dipendente" name="employer_phone" required>
+                        <input type="text" class="form-control" value="<[cellulareDipendente]>" name="employer_phone_update">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>E-Mail </label>
-                        <input type="email" class="form-control" value="" placeholder="Email Dipendente" name="employer_mail">
+                        <input type="text" class="form-control" value="<[emailDipendente]>" name="employer_mail_update">
                     </div>
                 </div>
             </div>
 
             <!-- SUBMIT BUTTON -->
-            <button type="submit" name="add_new_service" class="btn btn-primary">Aggiungi Dipendente</button>
+            <button type="submit" name="edit_new_service" class="btn btn-primary">Modifica Dipendente</button>
         </form>
 
     </div>
