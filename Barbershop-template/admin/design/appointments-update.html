@@ -1,0 +1,74 @@
+<form method="POST" action="appointment_edit.php">
+    <div class="card-body">
+        <div class=" card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-1 font-weight-bold text-primary">Modifica Appuntamento</h6>
+            </div>
+
+            <div class="card-header py-3">
+
+                <!-- INPUT VALUE -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" name="state" value="1">
+                    </div>
+                </div>
+
+                <!-- ID VALUE -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Appuntamento </label>
+                        <input type="hidden" class="form-control" name="appointment_id" value="<[idAppuntamento]>">
+                        <input type="text" class="form-control" value="<[idAppuntamento]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Cliente </label>
+                        <input type="text" class="form-control" name="client_id" value="<[idUtente]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Servizio Prenotato </label>
+                        <input type="text" class="form-control" name="service_name" value="<[nomeAttivita]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Giorno Appuntamento</label> <br>
+                        <input type="date" class="form-control" name="appointment_date_update" value="<[inizioDataAppuntamento]>" onfocus="(this.type='date')">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Slot Temporale Appuntamento</label>
+                        <select class="custom-select" name="selected_time_slot_update">
+                            <option disabled selected hidden><[inizioTempoAppuntamento]></option>
+                            <option name="selected_time_slot_update" value="9:00:00">09:00 - 10:00 AM</option>
+                            <option name="selected_time_slot_update" value="10:00:00">10:00 - 11:00 AM</option>
+                            <option name="selected_time_slot_update" value="11:00:00">11:00 - 12:00 AM</option>
+                            <option name="selected_time_slot_update" value="12:00:00">12:00 - 13:00 AM</option>
+                            <option name="selected_time_slot_update" value="14:00:00">02:00 - 03:00 PM</option>
+                            <option name="selected_time_slot_update" value="15:00:00">03:00 - 04:00 PM</option>
+                            <option name="selected_time_slot_update" value="16:00:00">04:00 - 05:00 PM</option>
+                            <option name="selected_time_slot_update" value="17:00:00">05:00 - 06:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EDIT & GO BACK BUTTON -->
+        <button type="submit" class="btn btn-secondary">
+            <a href="appointment.php" style="color: white; text-decoration: none"> Indietro</a>
+        </button>
+
+        <button type="submit" name="edit_new_service" class="btn btn-primary">
+            <a style="color: white; text-decoration: none"> Modifica Appuntamento</a>
+        </button>
+    </div>
+</form>

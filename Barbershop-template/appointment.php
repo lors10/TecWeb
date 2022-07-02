@@ -5,6 +5,18 @@
     require ("include/session-start.php");
 
 
+        /*
+            seleziono da prenotazione le righe duplicate contandole secondo idAttivita
+
+            SELECT idAppuntamento, COUNT(idAttivita)
+            FROM prenotazione
+            GROUP BY idAppuntamento
+            HAVING COUNT(idAttivita) > 1
+
+        */
+
+
+
     error_reporting(0);
 
 
@@ -122,21 +134,15 @@
                     }
                 }
 
-                $appointment->setContent("successAlert", "<div class=\"alert alert-success\">
-                                                                            <p>Prenotazione avvenuta con successo</p>
-                                                                        </div>");
 
-                header("Location: index.php");
+                header("Location: success_page.php");
 
             } else {
 
                 // check errore
                 //echo "Errore: " . $query . '<br />' . $connection->connect_error;
-                $appointment->setContent("errorAlert", "<div class=\"alert alert-danger\">
-                                                                            <p>Prenotazione non avvenuta</p>
-                                                                        </div>");
 
-                header("Location: appointment.php");
+                header("Location: error_page.php");
             }
 
 

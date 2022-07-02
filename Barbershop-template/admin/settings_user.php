@@ -17,6 +17,7 @@
                                         LEFT JOIN gruppi
                                         ON utentiGruppi.idGruppo = gruppi.idGruppo
                                         /*WHERE utentiGruppi.idGruppo = 2*/
+                                        WHERE utenti.idutente != {$_SESSION['id']} 
                                         ");
 
     if (!$query) {

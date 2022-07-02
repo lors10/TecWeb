@@ -10,7 +10,8 @@
 
 
     // query per estrarre info su prossimi appuntamenti e inserirli nella tabella apposita
-    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, appuntamento.inizioTempoAppuntamento, appuntamento.idUtente,
+    $stmt = $connection->query("SELECT appuntamento.idAppuntamento, appuntamento.inizioDataAppuntamento, 
+                                                 appuntamento.inizioTempoAppuntamento, appuntamento.idUtente, appuntamento.cancellazione,
                                                  prenotazione.idAppuntamento, prenotazione.idAttivita,
                                                  attivita.idAttivita, attivita.nomeAttivita
                                                  FROM appuntamento
@@ -18,7 +19,8 @@
                                                  ON appuntamento.idAppuntamento = prenotazione.idAppuntamento
                                                  INNER JOIN attivita
                                                  ON prenotazione.idAttivita = attivita.idAttivita
-                                                 WHERE appuntamento.inizioDataAppuntamento >= current_date");
+                                                 WHERE appuntamento.inizioDataAppuntamento >= current_date AND appuntamento.cancellazione = 0 
+                                                 ORDER BY appuntamento.idUtente, appuntamento.inizioTempoAppuntamento");
 
     if (!$stmt) {
 
@@ -35,7 +37,7 @@
         }
     } while ($data);
 
-    $all_appointment_table = new Template("design/appointments-all-table.html");
+    $old_appointment_table = new Template("design/appointments-old-table.html");
 
     // query per estrapolare dati di:
     // - appuntamento
@@ -51,7 +53,7 @@
                                              ON appuntamento.idAppuntamento = prenotazione.idAppuntamento
                                              INNER JOIN attivita
                                              ON prenotazione.idAttivita = attivita.idAttivita
-                                             /*WHERE appuntamento.inizioAppuntamento >= current_date*/");
+                                             WHERE appuntamento.inizioDataAppuntamento < current_date");
 
     if (!$stmt) {
 
@@ -63,16 +65,42 @@
         $data = $stmt->fetch_assoc();
         if ($data){
             foreach ($data as $key => $value) {
-                $all_appointment_table->setContent($key, $value);
+                $old_appointment_table->setContent($key, $value);
             }
         }
     } while ($data);
 
 
 
+
+
     $cancelled_appointment_table = new Template("design/appointments-cancelled-table.html");
 
-    // query per vedere tutti gli appuntamenti annullati
+    // manca query per vedere tutti gli appuntamenti annullati
+
+    $stmt = $connection->query("SELECT * FROM appuntamento WHERE cancellazione = 1");
+
+    if (!$stmt) {
+
+        //error
+    }
+
+    do {
+
+        $data = $stmt->fetch_assoc();
+        if ($data){
+            foreach ($data as $key => $value) {
+                $cancelled_appointment_table->setContent($key, $value);
+            }
+        }
+    } while ($data);
+
+
+
+
+
+
+
     $stmt = $connection->query("SELECT * FROM attivita");
 
     $serviceCount = $stmt->num_rows;
@@ -109,7 +137,7 @@
 
 
     $appointment->setContent("appointmentNexttable", $next_appointment_table->get());
-    $appointment->setContent("appointmentAlltable", $all_appointment_table->get());
+    $appointment->setContent("appointmentAlltable", $old_appointment_table->get());
     $appointment->setContent("appointmentCancelledtable", $cancelled_appointment_table->get());
     $main->setContent("appointment", $appointment->get());
     $main->setContent("loggedUser", $_SESSION['name']);

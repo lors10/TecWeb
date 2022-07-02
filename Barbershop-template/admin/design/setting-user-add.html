@@ -1,0 +1,90 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Aggiungi Amministratore</h6>
+    </div>
+    <form class="login-container validate-form" method="POST" action="settings_user_add.php" name="admin-form" onsubmit="return validateAdminForm()">
+        <div class="card-body">
+            <div class=" card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-1 font-weight-bold text-primary">Informazioni Personali</h6>
+                </div>
+
+                <div class="card-header py-3">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="hidden" name="state" value="1">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Nome </label>
+                            <input type="text" class="form-control" name="admin_name" placeholder="Mario" oninput="getElementById('required_admin_name').style.display=''" autocomplete="off">
+                            <span class="invalid-feedback" id="required_admin_name">Nome richiesto!</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Cognome </label>
+                            <input type="text" class="form-control" name="admin_surname" placeholder="Rossi" oninput="getElementById('required_admin_surname').style.display='none'" autocomplete="off">
+                            <span class="invalid-feedback" id="required_admin_surname">Cognome richiesto!</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Numero </label>
+                            <input type="text" class="form-control" name="admin_number" placeholder="1237359876" oninput="getElementById('required_admin_phone').style.display='none'" autocomplete="off">
+                            <span class="invalid-feedback" id="required_admin_phone">Numero di telefono richiesto!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-1 font-weight-bold text-primary">Informazioni Account</h6>
+                </div>
+
+                <div class="card-header py-3">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Username </label>
+                            <input type="text" class="form-control" name="admin_username" placeholder="username" oninput="getElementById('required_admin_username').style.display='none'" autocomplete="off">
+                            <span class="invalid-feedback" id="required_admin_username">Username richiesto!</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>E-mail (Facoltativo)</label>
+                            <input type="email" class="form-control" name="admin_mail" placeholder="nome@cognome.qualcosa">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Password </label>
+                            <input type="password" class="form-control" name="admin_password" placeholder="password" oninput="getElementById('required_admin_password').style.display='none'" autocomplete="off">
+                            <span class="invalid-feedback" id="required_admin_password">Password richiesta!</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- EDIT & GO BACK BUTTON -->
+            <button type="submit" class="btn btn-secondary">
+                <a href="settings_user.php" style="color: white; text-decoration: none"> Indietro</a>
+            </button>
+
+            <button type="submit" name="edit_new_service" class="btn btn-primary">
+                <a  style="color: white; text-decoration: none"> Aggiungi Account</a>
+            </button>
+        </div>
+    </form>
+</div>
+
+
+

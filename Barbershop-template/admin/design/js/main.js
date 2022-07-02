@@ -42,6 +42,63 @@ function validateLogInForm()
 
 
 /*
+	============================
+
+	VALIDATE ADD ADMIN FORM
+
+	============================
+*/
+
+function validateAdminForm()
+{
+    var admin_nome_input = document.forms["admin-form"]["admin_name"].value;
+    var admin_cognome_input = document.forms["admin-form"]["admin_surname"].value;
+    var admin_phone_input = document.forms["admin-form"]["admin_number"].value;
+    var admin_username_input = document.forms["admin-form"]["admin_username"].value;
+    var admin_password_input = document.forms["admin-form"]["admin_password"].value;
+
+    if (admin_nome_input == "" && admin_cognome_input == "" &&
+        admin_phone_input == "" && admin_username_input == "" &&
+        admin_password_input == "")
+    {
+        document.getElementById('required_admin_name').style.display = 'initial';
+        document.getElementById('required_admin_surname').style.display = 'initial';
+        document.getElementById('required_admin_phone').style.display = 'initial';
+        document.getElementById('required_admin_username').style.display = 'initial';
+        document.getElementById('required_admin_password').style.display = 'initial';
+        return false;
+    }
+
+    if (admin_nome_input == "")
+    {
+        document.getElementById('required_admin_name').style.display = 'initial';
+        return false;
+    }
+    if (admin_cognome_input == "")
+    {
+        document.getElementById('required_admin_surnam').style.display = 'initial';
+        return false;
+    }
+    if (admin_phone_input == "")
+    {
+        document.getElementById('required_admin_phone').style.display = 'initial';
+        return false;
+    }
+    if (admin_username_input == "")
+    {
+        document.getElementById('required_admin_username').style.display = 'initial';
+        return false;
+    }
+    if (admin_password_input == "")
+    {
+        document.getElementById('required_admin_password').style.display = 'initial';
+        return false;
+    }
+
+}
+
+
+/*
     ======================================
     
     DASHBOARD PAGE ==== > TOGGLE BOOKINGS TABS IN DASHBOARD PAGE

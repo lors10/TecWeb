@@ -1,0 +1,71 @@
+<form method="POST" action="appointment_edit.php">
+    <div class="card-body">
+        <div class=" card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-1 font-weight-bold text-primary">Annulla Appuntamento</h6>
+            </div>
+
+            <div class="card-header py-3">
+
+                <!-- INPUT VALUE -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="hidden" class="form-control" name="state" value="1">
+                    </div>
+                </div>
+
+                <!-- ID VALUE -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Appuntamento </label>
+                        <input type="hidden" class="form-control" name="appointment_id" value="<[idAppuntamento]>">
+                        <input type="text" class="form-control" value="<[idAppuntamento]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Id Cliente </label>
+                        <input type="text" class="form-control" name="" value="<[idUtente]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Servizio Prenotato </label>
+                        <input type="text" class="form-control" name="" value="<[nomeAttivita]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Giorno Appuntamento</label> <br>
+                        <input type="date" class="form-control" name="" value="<[inizioDataAppuntamento]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Slot Temporale Appuntamento</label>
+                        <input type="text" class="form-control" name="" value="<[inizioTempoAppuntamento]>" disabled>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Motivazione Annullamento Appuntamento</label> <br>
+                        <input type="text" class="form-control" name="appointment_cancel" placeholder="Perchè si desidera annullare l'appuntamento ? (In breve)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- EDIT & GO BACK BUTTON -->
+        <button type="submit" class="btn btn-secondary">
+            <a href="appointment.php" style="color: white; text-decoration: none"> Indietro</a>
+        </button>
+
+        <button type="submit" name="edit_new_service" class="btn btn-primary">
+            <a style="color: white; text-decoration: none"> Annulla Appuntamento</a>
+        </button>
+    </div>
+</form>
