@@ -5,6 +5,13 @@
     require ("../include/session-start.php");
 
     $main = new Template("design/index.html");
+
+    $log = $_SESSION['id'];
+    $idG = $_SESSION['idG'];
+
+    // controllo se l'utente è loggato o meno
+    require ("../include/authorization.php");
+
     $add_slider = new Template("design/images-add-slider.html");
 
     if (!isset($_REQUEST['state'])) {

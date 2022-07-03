@@ -5,6 +5,7 @@
     require ("include/session-start.php");
 
 
+
         /*
             seleziono da prenotazione le righe duplicate contandole secondo idAttivita
 
@@ -16,7 +17,6 @@
         */
 
 
-
     error_reporting(0);
 
 
@@ -25,6 +25,10 @@
 
     $log = $_SESSION['id'];
     $idG = $_SESSION['idG'];
+
+    // controllo se l'utente è loggato o meno
+    require ("include/authorization.php");
+
 
 
     $appointment = new Template("design/appuntamento-form-2.html");

@@ -5,6 +5,13 @@
     require ("../include/session-start.php");
 
     $main = new Template("design/index.html");
+
+    $log = $_SESSION['id'];
+    $idG = $_SESSION['idG'];
+
+    // controllo se l'utente è loggato o meno
+    require ("../include/authorization.php");
+
     $appointment = new Template("design/appointments.html");
     $next_appointment_table = new Template("design/appointments-next-table.html");
 

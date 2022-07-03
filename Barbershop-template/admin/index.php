@@ -6,6 +6,12 @@
 
     $main = new Template("design/index.html");
 
+    $log = $_SESSION['id'];
+    $idG = $_SESSION['idG'];
+
+    // controllo se l'utente è loggato o meno
+    require ("../include/authorization.php");
+
 
     // query per conteggio dei clienti del sito
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,

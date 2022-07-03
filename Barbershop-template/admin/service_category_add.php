@@ -4,6 +4,13 @@
     require ("../include/template2.inc.php");
     require ("../include/session-start.php");
 
+    $log = $_SESSION['id'];
+    $idG = $_SESSION['idG'];
+
+    // controllo se l'utente è loggato o meno
+    require ("../include/authorization.php");
+
+
     if (!isset($_REQUEST['state'])) {
         $_REQUEST['state'] = 0;
     }
