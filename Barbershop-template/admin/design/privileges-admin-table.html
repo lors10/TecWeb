@@ -1,0 +1,57 @@
+<table class="table table-bordered tabcontent" id="Admin-table" width="100%" cellspacing="0">
+    <thead>
+    <tr>
+        <th scope="col">Id Servizio</th>
+        <th scope="col">Script</th>
+        <th scope="col">Descrizione Servizio</th>
+        <th scope="col">Azioni</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="border-right: 0px;"></td>
+        <td style="border-left: 0px; border-right: 0px;"></td>
+        <td style="border-left: 0px; border-right: 0px;"></td>
+        <td>
+
+            <!-- ADD CATEGORY BUTTON -->
+
+            <li class="list-inline-item" data-toggle="tooltip" title="Add">
+                <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                    <i class="fa fa-plus"></i><a  style="color: white; text-decoration: none" href="privileges_admin_add.php"> Add</a>
+                </button>
+            </li>
+        </td>
+    </tr>
+    <[foreach]>
+    <tr>
+        <td><[idServizio]></td>
+        <td><[script]></td>
+        <td><[descrizioneServizio]></td>
+        <td>
+            <ul class="list-inline m-0">
+
+                <!-- EDIT BUTTON -->
+
+                <li class="list-inline-item" data-toggle="tooltip" title="Edit">
+                    <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                        <a style="color: white; text-decoration: none" href="privileges_admin_edit.php?edit=<[idServizio]>"><i class="fa fa-edit"></i> Edit</a>
+                    </button>
+                </li>
+
+                <!-- DELETE BUTTON -->
+
+                <li class="list-inline-item" data-toggle="tooltip" title="Delete">
+                    <a href="#" style="color: white;">
+                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="modal" data-target="#" data-placement="top">
+                            <i class="fa fa-trash"></i><a style="color: white; text-decoration: none" href="privileges_admin_delete.php?delete=<[idServizio]>"> Delete</a>
+                        </button>
+                    </a>
+                </li>
+
+            </ul>
+        </td>
+    </tr>
+    <[/foreach]>
+    </tbody>
+</table>

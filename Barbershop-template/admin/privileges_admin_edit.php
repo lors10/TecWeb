@@ -16,13 +16,13 @@
 
     // controllo se l'utente (admin / cliente) ha l'accesso a questa pagina
     $stmt = "SELECT servizi.idServizio, servizi.script,
-                                    gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
-                                    FROM servizi
-                                    LEFT JOIN gruppiServizi
-                                    ON servizi.idServizio = gruppiServizi.idServizio
-                                    LEFT JOIN gruppi
-                                    ON gruppiServizi.idGruppo = gruppi.idGruppo
-                                    WHERE servizi.script = '{$_SERVER['SCRIPT_NAME']}' AND gruppiServizi.idgruppo = {$log}";
+                                gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
+                                FROM servizi
+                                LEFT JOIN gruppiServizi
+                                ON servizi.idServizio = gruppiServizi.idServizio
+                                LEFT JOIN gruppi
+                                ON gruppiServizi.idGruppo = gruppi.idGruppo
+                                WHERE servizi.script = '{$_SERVER['SCRIPT_NAME']}' AND gruppiServizi.idgruppo = {$log}";
 
 
     if ($connection->query($stmt) == 1) {
@@ -52,7 +52,7 @@
     }
     // fine controllo accesso
 
-    $images_edit = new Template("design/images-edit.html");
+    $edit_admin_privilege = new Template("design/privileges-admin-edit.html");
 
 
     if (!isset($_REQUEST['state'])) {
@@ -63,16 +63,16 @@
 
         case 0:
 
-            // estraggo i dati della tabella immagini
-            $stmt = $connection->query("SELECT idImmagine, path, alt 
-                                                    FROM immagini
-                                                    WHERE idImmagine = {$_REQUEST['edit']}");
+            // estraggo i dati della tabella servizi
+            $stmt = $connection->query("SELECT idServizio, script, descrizioneServizio 
+                                                        FROM servizi
+                                                        WHERE idServizio = {$_REQUEST['edit']}");
 
             while ($data = $stmt->fetch_assoc()) {
 
                 foreach ($data as $key => $value) {
 
-                    $images_edit->setContent($key,$value);
+                    $edit_admin_privilege->setContent($key,$value);
                 }
             }
 
@@ -82,28 +82,27 @@
 
             // modificare i dati della tabella
             // notifica
-            // tornare alla home immagini
+            // tornare alla pagina privilegi
 
-            $stmt = $connection->query("UPDATE immagini SET 
-                                                        path = \"{$_REQUEST['image_path_update']}\",
-                                                        alt = \"{$_REQUEST['image_alt_update']}\"
-                                                        WHERE idImmagine = {$_REQUEST['image_id']}");
+            $stmt = $connection->query("UPDATE servizi SET 
+                                                        script = \"{$_REQUEST['script_path_update']}\",
+                                                        descrizioneServizio = \"{$_REQUEST['script_description_update']}\"
+                                                        WHERE idServizio = {$_REQUEST['service_id']}");
 
             if ($stmt == 1) {
 
-                echo "Categoria aggiunta con successo!";
+                echo "Servizio modificato con successo";
 
-                header("Location: images.php");
+                header("Location: privileges.php");
             } else {
 
                 // check errore
                 echo "Errore: " . $stmt . '<br />' . $connection->connect_error;
             }
 
+
             break;
     }
-
-
 
 
     $stmt = $connection->query("SELECT * FROM attivita");
@@ -128,20 +127,20 @@
 
 
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
-                                                utentiGruppi.idUtente, utentiGruppi.idGruppo
-                                                FROM utenti
-                                                LEFT JOIN utentiGruppi
-                                                ON utenti.idUtente = utentiGruppi.idUtente
-                                                /*WHERE utentiGruppi.idGruppo = 2*/");
+                                                        utentiGruppi.idUtente, utentiGruppi.idGruppo
+                                                        FROM utenti
+                                                        LEFT JOIN utentiGruppi
+                                                        ON utenti.idUtente = utentiGruppi.idUtente
+                                                        /*WHERE utentiGruppi.idGruppo = 2*/");
 
-    $employeesCount = $stmt->num_rows;
+    $clientsCount = $stmt->num_rows;
 
-    $main->setContent("clientsCount", $employeesCount);
+    $main->setContent("clientsCount", $clientsCount);
 
 
-
-    $main->setContent("edit_images", $images_edit->get());
+    $main->setContent("edit_admin_privileges", $edit_admin_privilege->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
+
 
 ?>

@@ -14,6 +14,7 @@
     // controllo se l'utente è loggato o meno
     require ("../include/authorization.php");
 
+
     // controllo se l'utente (admin / cliente) ha l'accesso a questa pagina
     $stmt = "SELECT servizi.idServizio, servizi.script,
                         gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
@@ -52,56 +53,66 @@
     }
     // fine controllo accesso
 
-    $edit_category = new Template("design/service-category-edit.html");
+
+    $privileges = new Template("design/privileges.html");
+    $privileges_user = new Template("design/privileges-user-table.html");
+    $privileges_admin = new Template("design/privileges-admin-table.html");
 
 
-    if (!isset($_REQUEST['state'])) {
-        $_REQUEST['state'] = 0;
+
+    // devo selezionare i privilegi dalla tabella servizi e passarli alla tabella degli utenti
+    $stmt = $connection->query("SELECT servizi.idServizio, servizi.script, servizi.descrizioneServizio,
+                                             gruppiServizi.idServizio, gruppiServizi.idGruppo
+                                             FROM servizi
+                                             LEFT JOIN gruppiServizi
+                                             ON servizi.idServizio = gruppiServizi.idServizio
+                                             WHERE gruppiServizi.idGruppo = 2");
+
+    if (!$stmt) {
+
+        // errore query
+        echo "errore";
     }
 
-    switch ($_REQUEST['state']) {
+    do {
 
-        case 0:
-
-            // estraggo i dati della tabella servizi
-            $stmt = $connection->query("SELECT idCategoria, nomeCategoria, descrizioneCategoria 
-                                                FROM categoriaAttivita
-                                                WHERE idCategoria = {$_REQUEST['edit']}");
-
-            while ($data = $stmt->fetch_assoc()) {
-
-                foreach ($data as $key => $value) {
-
-                    $edit_category->setContent($key,$value);
-                }
+        $data = $stmt->fetch_assoc();
+        if ($data){
+            foreach ($data as $key => $value) {
+                $privileges_user->setContent($key, $value);
             }
+        }
+    } while ($data);
 
-            break;
 
-        case 1:
+    // devo selezionare i privilegi dalla tabella servizi e passarli alla tabella degli amministratori
+    $stmt = $connection->query("SELECT servizi.idServizio, servizi.script, servizi.descrizioneServizio,
+                                                 gruppiServizi.idServizio, gruppiServizi.idGruppo
+                                                 FROM servizi
+                                                 LEFT JOIN gruppiServizi
+                                                 ON servizi.idServizio = gruppiServizi.idServizio
+                                                 WHERE gruppiServizi.idGruppo = 1");
 
-            // modificare i dati della tabella
-            // notifica
-            // tornare alla home
+    if (!$stmt) {
 
-            $stmt = $connection->query("UPDATE categoriaAttivita SET 
-                                                    nomeCategoria = \"{$_REQUEST['category_name_update']}\",
-                                                    descrizioneCategoria = \"{$_REQUEST['category_description_update']}\"
-                                                    WHERE idCategoria = {$_REQUEST['category_id']}");
-
-            if ($stmt == 1) {
-
-                echo "Categoria aggiunta con successo!";
-
-                header("Location: service_category.php");
-            } else {
-
-                // check errore
-                echo "Errore: " . $stmt . '<br />' . $connection->connect_error;
-            }
-
-            break;
+        // errore query
+        echo "errore";
     }
+
+    do {
+
+        $data = $stmt->fetch_assoc();
+        if ($data){
+            foreach ($data as $key => $value) {
+                $privileges_admin->setContent($key, $value);
+            }
+        }
+    } while ($data);
+
+
+
+
+
 
     $stmt = $connection->query("SELECT * FROM attivita");
 
@@ -131,14 +142,16 @@
                                                 ON utenti.idUtente = utentiGruppi.idUtente
                                                 /*WHERE utentiGruppi.idGruppo = 2*/");
 
-    $clientsCount = $stmt->num_rows;
+    $employeesCount = $stmt->num_rows;
 
-    $main->setContent("clientsCount", $clientsCount);
+    $main->setContent("clientsCount", $employeesCount);
 
 
-    $main->setContent("edit_category", $edit_category->get());
+
+    $privileges->setContent("user_privileges", $privileges_user->get());
+    $privileges->setContent("admin_privileges", $privileges_admin->get());
+    $main->setContent("privileges", $privileges->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
-
 
 ?>

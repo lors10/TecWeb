@@ -47,8 +47,8 @@
     }
     // fine controllo accesso
 
-    $stmt = $connection->query("DELETE FROM galleria WHERE idImmagine='{$_REQUEST['delete']}'");
+    $stmt = $connection->query("DELETE FROM servizi WHERE idServizio='{$_REQUEST['delete']}'");
 
-    header('Location: images.php');
+    header('Location: privileges.php');
 
 ?>

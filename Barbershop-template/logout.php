@@ -4,7 +4,7 @@
 
     unset($_SESSION["id"]);
     unset($_SESSION["name"]);
-    header("Location: index.php");
+    header("Location: login.php");
 
 
 ?>

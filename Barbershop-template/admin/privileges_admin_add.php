@@ -14,6 +14,7 @@
     // controllo se l'utente è loggato o meno
     require ("../include/authorization.php");
 
+
     // controllo se l'utente (admin / cliente) ha l'accesso a questa pagina
     $stmt = "SELECT servizi.idServizio, servizi.script,
                             gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
@@ -52,7 +53,8 @@
     }
     // fine controllo accesso
 
-    $add_images = new Template("design/images-add.html");
+
+    $add_admin_privileges = new Template("design/privileges-admin-add.html");
 
     if (!isset($_REQUEST['state'])) {
         $_REQUEST['state'] = 0;
@@ -69,40 +71,42 @@
 
         case 1:
 
-            // query per aggiungere un'immagine
-            // notifica di aggiunta
+            // query per inserire servizio raggiungibile da utente (su tabella servizi)
+            $stmt = $connection->query("INSERT INTO servizi (idServizio, script, descrizioneServizio)
+                                                    VALUES (NULL, '{$_REQUEST['script_path']}', '{$_REQUEST['script_description']}')");
 
-            /*
+            if (!$stmt){
 
-                $query = "INSERT into attivita (idAttivita, idCategoria, nomeAttivita, descrizioneAttivita, prezzoAttivita)
-                                VALUES (NULL, {$_REQUEST['service_category']}, '{$_REQUEST['service_name']}', '{$_REQUEST['service_description']}', {$_REQUEST['service_price']})";
-
-                if ($connection->query($query) == 1) {
-
-                    echo "Categoria aggiunta con successo!";
-
-                    header("Location: services.php");
-                } else {
-
-                    // check errore
-                    echo "Errore: " . $query . '<br />' . $connection->connect_error;
-                }
-
-            */
-
-            $query = "INSERT into immagini (idImmagine, path, alt)
-                            VALUES (NULL, '{$_REQUEST['image_path']}', '{$_REQUEST['image_alt']}')";
-
-            if ($connection->query($query) == 1) {
-
-                echo "Immagine aggiunta con successo!";
-
-                header("Location: images.php");
-            } else {
-
-                // check errore
-                echo "Errore: " . $query . '<br />' . $connection->connect_error;
+                //errore
+                echo "errore query 1";
             }
+
+            // query per selezionare id servizio da tabella servizi
+            // query per selezionare id Gruppo (forse) da tabella Gruppi
+            $sql = "SELECT idServizio, script, descrizioneServizio FROM servizi 
+                    WHERE script = '{$_REQUEST['script_path']}' AND descrizioneServizio ='{$_REQUEST['script_description']}'";
+
+            if (!$sql) {
+
+                //errore
+                echo "errore query 2";
+            }
+
+            $result = $connection->query($sql);
+
+            while ($row = $result->fetch_assoc()) {
+
+
+                // query per inserire nella tabella gruppiServizi le chiavi esterne (idGruppo, idServizio)
+                $stmt = $connection->query("INSERT into gruppiServizi (idGruppo, idServizio) VALUES (1,{$row['idServizio']})");
+
+                if (!$stmt) {
+
+                    echo "errore query 3";
+                }
+            }
+
+            header("Location: privileges.php");
 
 
             break;
@@ -133,18 +137,18 @@
 
 
     $stmt = $connection->query("SELECT utenti.idUtente, utenti.nomeUtente, utenti.cognomeUtente, utenti.cellulareUtente, utenti.emailUtente,
-                                            utentiGruppi.idUtente, utentiGruppi.idGruppo
-                                            FROM utenti
-                                            LEFT JOIN utentiGruppi
-                                            ON utenti.idUtente = utentiGruppi.idUtente
-                                            /*WHERE utentiGruppi.idGruppo = 2*/");
+                                                    utentiGruppi.idUtente, utentiGruppi.idGruppo
+                                                    FROM utenti
+                                                    LEFT JOIN utentiGruppi
+                                                    ON utenti.idUtente = utentiGruppi.idUtente
+                                                    /*WHERE utentiGruppi.idGruppo = 2*/");
 
     $employeesCount = $stmt->num_rows;
 
     $main->setContent("clientsCount", $employeesCount);
 
 
-    $main->setContent("add_images", $add_images->get());
+    $main->setContent("add_admin_privileges", $add_admin_privileges->get());
     $main->setContent("loggedUser", $_SESSION['name']);
     $main->close();
 

@@ -11,13 +11,13 @@
 
     // controllo se l'utente (admin / cliente) ha l'accesso a questa pagina
     $stmt = "SELECT servizi.idServizio, servizi.script,
-                        gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
-                        FROM servizi
-                        LEFT JOIN gruppiServizi
-                        ON servizi.idServizio = gruppiServizi.idServizio
-                        LEFT JOIN gruppi
-                        ON gruppiServizi.idGruppo = gruppi.idGruppo
-                        WHERE servizi.script = '{$_SERVER['SCRIPT_NAME']}' AND gruppiServizi.idgruppo = {$log}";
+                            gruppiServizi.idServizio, gruppiServizi.idGruppo, gruppi.idGruppo
+                            FROM servizi
+                            LEFT JOIN gruppiServizi
+                            ON servizi.idServizio = gruppiServizi.idServizio
+                            LEFT JOIN gruppi
+                            ON gruppiServizi.idGruppo = gruppi.idGruppo
+                            WHERE servizi.script = '{$_SERVER['SCRIPT_NAME']}' AND gruppiServizi.idgruppo = {$log}";
 
 
     if ($connection->query($stmt) == 1) {
@@ -47,8 +47,8 @@
     }
     // fine controllo accesso
 
-    $stmt = $connection->query("DELETE FROM galleria WHERE idImmagine='{$_REQUEST['delete']}'");
+    $stmt = $connection->query("DELETE FROM servizi WHERE idServizio='{$_REQUEST['delete']}'");
 
-    header('Location: images.php');
+    header('Location: privileges.php');
 
 ?>
