@@ -135,7 +135,7 @@
             $stmt = $connection->query("UPDATE appuntamento SET 
                                                             inizioDataAppuntamento = \"{$_REQUEST['appointment_date_update']}\",
                                                             inizioTempoAppuntamento = \"{$_REQUEST['selected_time_slot_update']}\"
-                                                            WHERE idAppuntamento = {$_REQUEST['appointment_id']}");
+                                                            WHERE idAppuntamento = {$_REQUEST['appointment_id_update']}");
 
             if ($stmt == 1) {
 
@@ -150,7 +150,7 @@
             $stmt = $connection->query("UPDATE appuntamento SET 
                                                             cancellazione = 1,
                                                             ragioneCancellazione = \"{$_REQUEST['appointment_cancel']}\"
-                                                            WHERE idAppuntamento = {$_REQUEST['appointment_id']}");
+                                                            WHERE idAppuntamento = {$_REQUEST['appointment_id_cancel']}");
 
             if ($stmt == 1) {
 

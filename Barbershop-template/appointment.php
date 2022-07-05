@@ -90,7 +90,8 @@
 
             // estaggo informazioni su utente che sta prenotando il servizio
 
-            $stmt = $connection->query("SELECT nomeUtente, cognomeUtente, cellulareUtente, username, emailUtente FROM utenti WHERE username='{$_SESSION['name']}'");
+            $stmt = $connection->query("SELECT idUtente, nomeUtente, cognomeUtente, cellulareUtente, username, emailUtente
+                                                FROM utenti WHERE username='{$_SESSION['name']}'");
 
             if (!$stmt) {
 
@@ -105,43 +106,6 @@
                 }
             }
 
-            /*
-            // faccio la query e la inserisco in un array associativo
-
-            // estrapolo dal db il conteggio dello stesso giorno in cui viene prenotato lo stesso slot di tempo da persone diverse
-            $result = $connection->query("SELECT inizioDataAppuntamento, COUNT(*) 
-                                                    FROM appuntamento 
-                                                    WHERE inizioTempoAppuntamento = '17:00:00' 
-                                                    GROUP BY inizioDataAppuntamento");
-
-
-            while ($data = $result->fetch_all(MYSQLI_ASSOC)) {
-
-                foreach ($data as $row) {
-
-                    //echo $row['COUNT(*)'] . "<br>";
-
-                    if (($row['COUNT(*)'] >= 2) && ($_REQUEST['selected_date'])) {
-
-                        //echo "caso falso";
-                        //echo "<br>";
-                        $appointment->setContent("label", "<label class=\"btn btn-secondary\" disabled=\"true\">
-                                                                                <input type=\"radio\" name=\"selected_time_slot\" value=\"17:00:00\" style=\"margin-bottom: 5px\">05:00 - 06:00 AM
-                                                                           </label>");
-
-                    } else {
-
-                        //echo "caso vero";
-                        //echo "<br>";
-                        $appointment->setContent("label", "<label class=\"default_btn_slot service_label item_label_slot btn btn-secondary\">
-                                                                            <input type=\"radio\" name=\"selected_time_slot\" value=\"17:00:00\" style=\"margin-bottom: 5px\">05:00 - 06:00 AM
-                                                                          </label>");
-
-                    }
-                }
-            }
-            */
-
 
             break;
 
@@ -150,11 +114,11 @@
             // compilazione ed invio form
 
             $query = "INSERT into appuntamento (idAppuntamento, idUtente, inizioDataAppuntamento, inizioTempoAppuntamento, cancellazione, createdAt)
-                            VALUES (NULL, {$_SESSION['id']}, '{$_REQUEST['selected_date']}',  '{$_REQUEST['selected_time_slot']}', 0, '" . date('Y-m-d H:i:s') . "')";
+                            VALUES (NULL, {$_REQUEST['client_id']}, '{$_REQUEST['selected_date']}',  '{$_REQUEST['selected_time_slot']}', 0, '" . date('Y-m-d H:i:s') . "')";
 
             if ($connection->query($query) == 1) {
 
-                $stmt = "SELECT * FROM appuntamento WHERE idUtente = {$_SESSION['id']}";
+                $stmt = "SELECT * FROM appuntamento WHERE idUtente = {$_REQUEST['client_id']}";
 
                 $result = $connection->query($stmt);
 
