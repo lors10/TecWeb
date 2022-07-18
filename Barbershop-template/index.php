@@ -259,7 +259,7 @@
     // sezione team: team.html
     $team = new Template("design/team.html");
 
-    $stmt = $connection->query("SELECT immagini.idImmagine, immagini.path, dipendenti.idImmagine 
+    $stmt = $connection->query("SELECT immagini.idImmagine, immagini.path, dipendenti.idImmagine, dipendenti.nomeDipendente, dipendenti.cognomeDipendente 
                                         FROM immagini
                                         LEFT JOIN dipendenti
                                         ON immagini.idImmagine = dipendenti.idImmagine
